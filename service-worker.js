@@ -1,5 +1,5 @@
 /* با هر تغییر مهم در فایل‌ها، عدد نسخه را یکی بالا ببرید تا کاربران نسخه‌ی جدید را بگیرند */
-const VERSION = 'v1';
+const VERSION = 'v2';
 const CACHE = 'arkan-' + VERSION;
 const CORE = ['./', './index.html', './manifest.json', './icon-180.png', './icon-192.png', './icon-512.png', './icon-maskable-512.png'];
 
