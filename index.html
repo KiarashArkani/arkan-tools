@@ -1,0 +1,2064 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="theme-color" content="#060a10">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="ارکانی عمران">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>دستیار مهندسی ارکانی عمران | جعبه‌ابزار مهندسی</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+/* ============ SVG ICON SYMBOLS ============ */
+</style>
+</head>
+<body>
+
+<!-- ============ ICON SPRITE ============ -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="ic-compass" viewBox="0 0 48 48">
+      <circle cx="24" cy="9" r="3.2" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M24 12 L10 40 M24 12 L38 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M14 33 H34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="10" cy="41.5" r="1.6" fill="currentColor"/>
+      <circle cx="38" cy="41.5" r="1.6" fill="currentColor"/>
+    </symbol>
+    <symbol id="ic-mixer" viewBox="0 0 48 48">
+      <path d="M14 8h20l-4 12H18z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M18 20l-4 18a2 2 0 002 2.4h16a2 2 0 002-2.4l-4-18" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M17 26c2 2 4-2 6 0s4-2 6 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M16 33c2 2 4-2 6 0s4-2 6 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      <circle cx="24" cy="6" r="2" fill="currentColor"/>
+    </symbol>
+    <symbol id="ic-beam" viewBox="0 0 48 48">
+      <path d="M10 10h28v6H27v16h11v6H10v-6h11V16H10z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="ic-rebar" viewBox="0 0 48 48">
+      <path d="M6 24 L14 12 L20 30 L26 12 L32 30 L38 12 L42 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="ic-cube" viewBox="0 0 48 48">
+      <path d="M24 6 L42 15 V33 L24 42 L6 33 V15 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M6 15 L24 24 L42 15 M24 24 V42" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="ic-swap" viewBox="0 0 48 48">
+      <path d="M8 16h26l-6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M40 32H14l6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="ic-table" viewBox="0 0 48 48">
+      <rect x="7" y="9" width="34" height="30" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M7 19h34M7 29h34M20 9v30M32 9v30" stroke="currentColor" stroke-width="1.6"/>
+    </symbol>
+    <symbol id="ic-sun" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <g stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <path d="M12 2v2.4M12 19.6V22M4.2 12H2M22 12h-2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6"/>
+      </g>
+    </symbol>
+    <symbol id="ic-moon" viewBox="0 0 24 24">
+      <path d="M20 14.5A8.5 8.5 0 019.5 4a8.5 8.5 0 1010.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="ic-back" viewBox="0 0 24 24">
+      <path d="M14 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="ic-info" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M12 11v6M12 7.5v.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="ic-load" viewBox="0 0 48 48">
+      <path d="M24 4v22" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+      <path d="M15 18l9 9 9-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="7" y="32" width="34" height="9" rx="1.6" fill="none" stroke="currentColor" stroke-width="2.2"/>
+    </symbol>
+    <symbol id="ic-stairs" viewBox="0 0 48 48">
+      <path d="M6 41h8v-8h8v-8h8v-8h8v-8h4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="ic-check" viewBox="0 0 48 48">
+      <path d="M24 5 L41 12 V23 C41 33 34 40 24 43 C14 40 7 33 7 23 V12 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M15.5 24l6 6 11-13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="ic-guide" viewBox="0 0 48 48">
+      <path d="M7 10c4-2.5 10-2.5 14 1v27c-4-3.5-10-3.5-14-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M41 10c-4-2.5-10-2.5-14 1v27c4-3.5 10-3.5 14-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="ic-ratio" viewBox="0 0 48 48">
+      <rect x="6" y="6" width="36" height="36" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M14 34l20-20" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+      <circle cx="15" cy="15" r="3.4" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="33" cy="33" r="3.4" fill="currentColor"/>
+    </symbol>
+    <symbol id="ic-globe" viewBox="0 0 48 48">
+      <circle cx="24" cy="24" r="17" fill="none" stroke="currentColor" stroke-width="2"/>
+      <ellipse cx="24" cy="24" rx="7.5" ry="17" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M7 24h34M9.5 15h29M9.5 33h29" stroke="currentColor" stroke-width="2"/>
+    </symbol>
+    <symbol id="ic-bale" viewBox="0 0 48 48">
+      <path d="M6 22c0-9.4 8.1-17 18-17s18 7.6 18 17-8.1 17-18 17c-2.4 0-4.7-.4-6.8-1.3L8 42l3-9.7C8 29.2 6 25.8 6 22z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M15 23l6 5 12-13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="ic-play" viewBox="0 0 48 48">
+      <rect x="5" y="10" width="38" height="28" rx="7" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M20 17l12 7-12 7z" fill="currentColor" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="ic-ytplay" viewBox="0 0 48 48">
+      <path d="M43 15.5c0-3-2.3-5.4-5.2-5.7C33 9.3 24 9.3 24 9.3s-9 0-13.8.5C7.3 10.1 5 12.5 5 15.5 4.7 18.3 4.5 21.1 4.5 24s.2 5.7.5 8.5c0 3 2.3 5.4 5.2 5.7 4.8.5 13.8.5 13.8.5s9 0 13.8-.5c2.9-.3 5.2-2.7 5.2-5.7.3-2.8.5-5.6.5-8.5s-.2-5.7-.5-8.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M19.5 18l10 6-10 6z" fill="currentColor"/>
+    </symbol>
+    <symbol id="ic-camera" viewBox="0 0 48 48">
+      <rect x="5" y="10" width="38" height="30" rx="8" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="24" cy="25" r="8.5" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="34.5" cy="16.5" r="1.8" fill="currentColor"/>
+    </symbol>
+    <symbol id="ic-slope" viewBox="0 0 48 48">
+      <path d="M6 38h36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M6 38L32 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M25 10h7v7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M6 38V26M6 38h12" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/>
+    </symbol>
+    <symbol id="ic-earth" viewBox="0 0 48 48">
+      <path d="M4 34l10-16 8 8 8-14 14 22z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M4 34h40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M14 27v-8M34 24v-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M11 21l3-3 3 3M31 18l3-3 3 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="ic-bank" viewBox="0 0 48 48">
+      <path d="M6 18L24 7l18 11" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M8 18h32v4H8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M11 22v14M19 22v14M29 22v14M37 22v14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M6 40h36" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+      <circle cx="24" cy="14" r="1.7" fill="currentColor"/>
+    </symbol>
+    <symbol id="ic-parking" viewBox="0 0 48 48">
+      <rect x="6" y="6" width="36" height="36" rx="5" fill="none" stroke="currentColor" stroke-width="2.2"/>
+      <path d="M16 34V13h8.5a6 6 0 010 12H16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="ic-keynums" viewBox="0 0 48 48">
+      <path d="M8 40V16l12-9v33M20 40V16l12-9v33M32 40V16l8-6v30" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M4 40h40" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="ic-seismic" viewBox="0 0 48 48">
+      <path d="M7 6v35h35" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M11 37 L17 15 H25 C30 15 32 26 42 30" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="30" cy="22" r="2.4" fill="currentColor"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="scanline"></div>
+
+<header class="topbar">
+  <button class="icon-btn" id="backBtn" onclick="goHome()" aria-label="بازگشت" hidden>
+    <svg class="ic"><use href="#ic-back"/></svg>
+  </button>
+  <div class="brand">
+    <svg class="ic brand-ic"><use href="#ic-compass"/></svg>
+    <div class="brand-txt">
+      <span class="brand-title" id="pageTitle">دستیار مهندسی ارکانی عمران</span>
+      <span class="brand-sub" id="pageSub">جعبه‌ابزار محاسبات سریع مهندسی عمران</span>
+    </div>
+  </div>
+  <button class="icon-btn theme-btn" onclick="toggleTheme()" aria-label="تغییر تم">
+    <svg class="ic" id="themeIconSun"><use href="#ic-sun"/></svg>
+    <svg class="ic" id="themeIconMoon" hidden><use href="#ic-moon"/></svg>
+  </button>
+</header>
+
+<main id="app">
+
+  <!-- ============ HOME ============ -->
+  <section id="view-home" class="view active">
+    <div class="grid-cards">
+
+      <button class="card" onclick="showTool('mix')">
+        <span class="card-glow"></span>
+        <svg class="card-ic"><use href="#ic-mixer"/></svg>
+        <span class="card-title">طرح اختلاط بتن</span>
+        <span class="card-desc">محاسبه مصالح بر اساس نسبت سیمان، ماسه و شن</span>
+      </button>
+
+      <button class="card" onclick="showTool('steel')">
+        <span class="card-glow"></span>
+        <svg class="card-ic"><use href="#ic-beam"/></svg>
+        <span class="card-title">وزن مقاطع فولادی</span>
+        <span class="card-desc">میلگرد، ورق و پروفیل‌های IPE</span>
+      </button>
+
+      <button class="card" onclick="showTool('rebar')">
+        <span class="card-glow"></span>
+        <svg class="card-ic"><use href="#ic-rebar"/></svg>
+        <span class="card-title">آرماتور دال / عضو</span>
+        <span class="card-desc">تعداد و وزن میلگرد بر اساس فواصل خاموت</span>
+      </button>
+
+      <button class="card" onclick="showTool('volume')">
+        <span class="card-glow"></span>
+        <svg class="card-ic"><use href="#ic-cube"/></svg>
+        <span class="card-title">حجم اعضای بتنی</span>
+        <span class="card-desc">دال، تیر، ستون و فونداسیون</span>
+      </button>
+
+      <button class="card" onclick="showTool('convert')">
+        <span class="card-glow"></span>
+        <svg class="card-ic"><use href="#ic-swap"/></svg>
+        <span class="card-title">تبدیل واحد مهندسی</span>
+        <span class="card-desc">طول، حجم، نیرو و تنش</span>
+      </button>
+
+      <button class="card" onclick="showTool('ref')">
+        <span class="card-glow"></span>
+        <svg class="card-ic"><use href="#ic-table"/></svg>
+        <span class="card-title">مرجع سریع</span>
+        <span class="card-desc">چگالی مصالح، جدول میلگرد و پروفیل</span>
+      </button>
+
+      <button class="card" onclick="showTool('load')">
+        <span class="card-glow"></span>
+        <svg class="card-ic"><use href="#ic-load"/></svg>
+        <span class="card-title">بارگذاری سازه</span>
+        <span class="card-desc">بار مرده، زنده و بار نهایی طراحی</span>
+      </button>
+
+      <button class="card" onclick="showTool('stairs')">
+        <span class="card-glow"></span>
+        <svg class="card-ic"><use href="#ic-stairs"/></svg>
+        <span class="card-title">محاسبه پله</span>
+        <span class="card-desc">تعداد، ارتفاع و کف‌پله بر اساس فرمول بلوندل</span>
+      </button>
+
+      <button class="card" onclick="showTool('colcheck')">
+        <span class="card-glow"></span>
+        <svg class="card-ic"><use href="#ic-check"/></svg>
+        <span class="card-title">آرماتور ستون</span>
+        <span class="card-desc">بررسی درصد آرماتور طولی نسبت به مقطع</span>
+      </button>
+
+      <button class="card" onclick="showTool('slope')">
+        <span class="card-glow"></span>
+        <svg class="card-ic"><use href="#ic-slope"/></svg>
+        <span class="card-title">محاسبه شیب و گرادیان</span>
+        <span class="card-desc">درصد شیب، زاویه و نسبت 1:n برای رمپ و مسیر</span>
+      </button>
+
+      <button class="card" onclick="showTool('earthwork')">
+        <span class="card-glow"></span>
+        <svg class="card-ic"><use href="#ic-earth"/></svg>
+        <span class="card-title">برآورد خاکبرداری و خاکریزی</span>
+        <span class="card-desc">حجم برش و پر، ضریب تورم و تراکم خاک</span>
+      </button>
+
+      <button class="card" onclick="showTool('bank')">
+        <span class="card-glow"></span>
+        <svg class="card-ic"><use href="#ic-bank"/></svg>
+        <span class="card-title">سود بانکی و سرمایه‌گذاری</span>
+        <span class="card-desc">سود ساده و مرکب، ماهانه، سالانه و نرخ موثر</span>
+      </button>
+
+      <button class="card" onclick="showTool('parking')">
+        <span class="card-glow"></span>
+        <svg class="card-ic"><use href="#ic-parking"/></svg>
+        <span class="card-title">ضوابط پارکینگ</span>
+        <span class="card-desc">ابعاد، شیب رمپ و برآورد تعداد پارکینگ مورد نیاز</span>
+      </button>
+
+      <button class="card" onclick="showTool('keynums')">
+        <span class="card-glow"></span>
+        <svg class="card-ic"><use href="#ic-keynums"/></svg>
+        <span class="card-title">اعداد کلیدی عمران و معماری</span>
+        <span class="card-desc">ابعاد پله، بار زنده، ارتفاع طبقات و مقادیر پرکاربرد</span>
+      </button>
+
+      <button class="card" onclick="showTool('seismic')">
+        <span class="card-glow"></span>
+        <svg class="card-ic"><use href="#ic-seismic"/></svg>
+        <span class="card-title">ضریب زلزله استاتیکی (۲۸۰۰)</span>
+        <span class="card-desc">محاسبه C، Sa، K، SDC و رسم طیف طرح طبق استاندارد ۲۸۰۰ ویرایش ۵</span>
+      </button>
+
+      <button class="card" onclick="showTool('guide')">
+        <span class="card-glow"></span>
+        <svg class="card-ic"><use href="#ic-guide"/></svg>
+        <span class="card-title">راهنما و درباره برنامه</span>
+        <span class="card-desc">آموزش استفاده و معرفی مجموعه ارکانی عمران</span>
+      </button>
+
+    </div>
+    <p class="disclaimer">
+      <svg class="ic ic-sm"><use href="#ic-info"/></svg>
+      این ابزار برای برآورد سریع طراحی شده؛ برای طراحی نهایی سازه از محاسبات مهندس ناظر استفاده کنید.
+    </p>
+  </section>
+
+  <!-- ============ 1) MIX DESIGN ============ -->
+  <section id="view-mix" class="view">
+    <div class="panel">
+      <div class="field-row">
+        <label>حجم بتن مورد نیاز (m³)</label>
+        <input type="number" id="mixVolume" value="1" step="0.1" min="0">
+      </div>
+      <div class="field-row triple">
+        <div><label>نسبت سیمان</label><input type="number" id="mixC" value="1" min="0" step="0.1"></div>
+        <div><label>نسبت ماسه</label><input type="number" id="mixS" value="2" min="0" step="0.1"></div>
+        <div><label>نسبت شن</label><input type="number" id="mixG" value="4" min="0" step="0.1"></div>
+      </div>
+      <div class="field-row">
+        <label>نسبت آب به سیمان (w/c)</label>
+        <input type="number" id="mixWC" value="0.5" min="0.1" max="1" step="0.01">
+      </div>
+      <button class="neon-btn" onclick="calcMix()">محاسبه مصالح</button>
+
+      <div class="result-box" id="mixResult" hidden></div>
+    </div>
+  </section>
+
+  <!-- ============ 2) STEEL WEIGHT ============ -->
+  <section id="view-steel" class="view">
+    <div class="panel">
+      <div class="tabs">
+        <button class="tab active" data-mode="rebar" onclick="setSteelMode('rebar')">میلگرد</button>
+        <button class="tab" data-mode="plate" onclick="setSteelMode('plate')">ورق</button>
+        <button class="tab" data-mode="ipe" onclick="setSteelMode('ipe')">پروفیل IPE</button>
+      </div>
+
+      <div id="steel-rebar" class="mode-box">
+        <div class="field-row triple">
+          <div><label>قطر (mm)</label>
+            <select id="rebarDia">
+              <option>6</option><option>8</option><option>10</option><option selected>12</option>
+              <option>14</option><option>16</option><option>18</option><option>20</option>
+              <option>22</option><option>25</option><option>28</option><option>32</option>
+            </select>
+          </div>
+          <div><label>طول هر شاخه (m)</label><input type="number" id="rebarLen" value="12" min="0" step="0.1"></div>
+          <div><label>تعداد</label><input type="number" id="rebarCount" value="1" min="1" step="1"></div>
+        </div>
+        <button class="neon-btn" onclick="calcRebarSteel()">محاسبه وزن</button>
+      </div>
+
+      <div id="steel-plate" class="mode-box" hidden>
+        <div class="field-row triple">
+          <div><label>طول (m)</label><input type="number" id="plateL" value="1" min="0" step="0.01"></div>
+          <div><label>عرض (m)</label><input type="number" id="plateW" value="1" min="0" step="0.01"></div>
+          <div><label>ضخامت (mm)</label><input type="number" id="plateT" value="10" min="0" step="0.5"></div>
+        </div>
+        <button class="neon-btn" onclick="calcPlate()">محاسبه وزن</button>
+      </div>
+
+      <div id="steel-ipe" class="mode-box" hidden>
+        <div class="field-row triple">
+          <div><label>پروفیل</label>
+            <select id="ipeProfile"></select>
+          </div>
+          <div><label>طول (m)</label><input type="number" id="ipeLen" value="6" min="0" step="0.1"></div>
+          <div><label>تعداد</label><input type="number" id="ipeCount" value="1" min="1" step="1"></div>
+        </div>
+        <button class="neon-btn" onclick="calcIPE()">محاسبه وزن</button>
+      </div>
+
+      <div class="result-box" id="steelResult" hidden></div>
+    </div>
+  </section>
+
+  <!-- ============ 3) REBAR IN ELEMENT ============ -->
+  <section id="view-rebar" class="view">
+    <div class="panel">
+      <div class="field-row triple">
+        <div><label>طول عضو (m)</label><input type="number" id="rbL" value="5" min="0" step="0.1"></div>
+        <div><label>عرض عضو (m)</label><input type="number" id="rbW" value="4" min="0" step="0.1"></div>
+        <div><label>پوشش بتن (cm)</label><input type="number" id="rbCover" value="3" min="0" step="0.5"></div>
+      </div>
+      <div class="field-row triple">
+        <div><label>قطر میلگرد (mm)</label>
+          <select id="rbDia">
+            <option>8</option><option selected>10</option><option>12</option><option>14</option><option>16</option><option>18</option><option>20</option>
+          </select>
+        </div>
+        <div><label>فاصله میلگرد (cm)</label><input type="number" id="rbSpace" value="20" min="1" step="1"></div>
+        <div><label>دو راستا؟</label>
+          <select id="rbBoth"><option value="1">بله (تار و پود)</option><option value="0">خیر (یک راستا)</option></select>
+        </div>
+      </div>
+      <button class="neon-btn" onclick="calcRebarElement()">محاسبه تعداد و وزن</button>
+      <div class="result-box" id="rbResult" hidden></div>
+    </div>
+  </section>
+
+  <!-- ============ 4) VOLUME ============ -->
+  <section id="view-volume" class="view">
+    <div class="panel">
+      <div class="tabs">
+        <button class="tab active" data-mode="slab" onclick="setVolMode('slab')">دال</button>
+        <button class="tab" data-mode="beam" onclick="setVolMode('beam')">تیر</button>
+        <button class="tab" data-mode="column" onclick="setVolMode('column')">ستون</button>
+        <button class="tab" data-mode="footing" onclick="setVolMode('footing')">فونداسیون</button>
+      </div>
+
+      <div id="vol-slab" class="mode-box">
+        <div class="field-row triple">
+          <div><label>طول (m)</label><input type="number" id="slabL" value="5" step="0.1"></div>
+          <div><label>عرض (m)</label><input type="number" id="slabW" value="4" step="0.1"></div>
+          <div><label>ضخامت (cm)</label><input type="number" id="slabT" value="15" step="1"></div>
+        </div>
+      </div>
+      <div id="vol-beam" class="mode-box" hidden>
+        <div class="field-row triple">
+          <div><label>عرض (cm)</label><input type="number" id="beamB" value="25" step="1"></div>
+          <div><label>ارتفاع (cm)</label><input type="number" id="beamH" value="40" step="1"></div>
+          <div><label>طول (m)</label><input type="number" id="beamL" value="5" step="0.1"></div>
+        </div>
+      </div>
+      <div id="vol-column" class="mode-box" hidden>
+        <div class="field-row triple">
+          <div><label>عرض (cm)</label><input type="number" id="colB" value="40" step="1"></div>
+          <div><label>عمق (cm)</label><input type="number" id="colH" value="40" step="1"></div>
+          <div><label>ارتفاع (m)</label><input type="number" id="colL" value="3.2" step="0.1"></div>
+        </div>
+      </div>
+      <div id="vol-footing" class="mode-box" hidden>
+        <div class="field-row triple">
+          <div><label>طول (m)</label><input type="number" id="ftL" value="2" step="0.1"></div>
+          <div><label>عرض (m)</label><input type="number" id="ftW" value="2" step="0.1"></div>
+          <div><label>ارتفاع (cm)</label><input type="number" id="ftH" value="60" step="1"></div>
+        </div>
+      </div>
+
+      <button class="neon-btn" onclick="calcVolume()">محاسبه حجم</button>
+      <div class="result-box" id="volResult" hidden></div>
+    </div>
+  </section>
+
+  <!-- ============ 5) UNIT CONVERTER ============ -->
+  <section id="view-convert" class="view">
+    <div class="panel">
+      <div class="field-row">
+        <label>دسته واحد</label>
+        <select id="convCategory" onchange="fillUnits()">
+          <option value="length">طول</option>
+          <option value="area">سطح</option>
+          <option value="volume">حجم</option>
+          <option value="force">نیرو</option>
+          <option value="stress">تنش / فشار</option>
+        </select>
+      </div>
+      <div class="field-row triple conv-row">
+        <div><label>از</label><select id="convFrom"></select></div>
+        <div><label>مقدار</label><input type="number" id="convValue" value="1" step="any"></div>
+        <div><label>به</label><select id="convTo"></select></div>
+      </div>
+      <button class="neon-btn" onclick="calcConvert()">تبدیل</button>
+      <div class="result-box" id="convResult" hidden></div>
+    </div>
+  </section>
+
+  <!-- ============ 6) QUICK REFERENCE ============ -->
+  <section id="view-ref" class="view">
+    <div class="panel">
+      <h3 class="ref-h">چگالی مصالح (kg/m³)</h3>
+      <div class="ref-table" id="refDensity"></div>
+
+      <h3 class="ref-h">جدول وزن میلگرد (kg/m)</h3>
+      <div class="ref-table" id="refRebar"></div>
+
+      <h3 class="ref-h">جدول وزن پروفیل IPE (kg/m)</h3>
+      <div class="ref-table" id="refIpe"></div>
+
+      <h3 class="ref-h">پوشش بتنی متداول (cm)</h3>
+      <div class="ref-table" id="refCover"></div>
+    </div>
+  </section>
+
+  <!-- ============ 7) STRUCTURAL LOADING ============ -->
+  <section id="view-load" class="view">
+    <div class="panel">
+      <div class="field-row triple">
+        <div><label>بار مرده (kg/m²)</label><input type="number" id="loadDead" value="500" min="0" step="10"></div>
+        <div><label>بار زنده (kg/m²)</label><input type="number" id="loadLive" value="200" min="0" step="10"></div>
+        <div><label>عرض بارگیر تیر (m)</label><input type="number" id="loadWidth" value="1" min="0" step="0.1"></div>
+      </div>
+      <div class="field-row triple">
+        <div><label>ضریب بار مرده</label><input type="number" id="loadFD" value="1.2" min="0" step="0.05"></div>
+        <div><label>ضریب بار زنده</label><input type="number" id="loadFL" value="1.6" min="0" step="0.05"></div>
+        <div></div>
+      </div>
+      <button class="neon-btn" onclick="calcLoad()">محاسبه بار</button>
+      <div class="result-box" id="loadResult" hidden></div>
+    </div>
+  </section>
+
+  <!-- ============ 8) STAIRCASE ============ -->
+  <section id="view-stairs" class="view">
+    <div class="panel">
+      <div class="field-row triple">
+        <div><label>ارتفاع طبقه (cm)</label><input type="number" id="stH" value="320" min="0" step="1"></div>
+        <div><label>ارتفاع پله پیشنهادی (cm)</label><input type="number" id="stRiser" value="17.5" min="10" max="20" step="0.1"></div>
+        <div></div>
+      </div>
+      <button class="neon-btn" onclick="calcStairs()">محاسبه پله</button>
+      <div class="result-box" id="stResult" hidden></div>
+    </div>
+  </section>
+
+  <!-- ============ 9) COLUMN REBAR CHECK ============ -->
+  <section id="view-colcheck" class="view">
+    <div class="panel">
+      <div class="field-row triple">
+        <div><label>عرض مقطع b (cm)</label><input type="number" id="ccB" value="40" min="0" step="1"></div>
+        <div><label>ارتفاع مقطع h (cm)</label><input type="number" id="ccH" value="40" min="0" step="1"></div>
+        <div></div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab active" data-mode="count" onclick="setCCMode('count')">سایز و تعداد میلگرد</button>
+        <button class="tab" data-mode="area" onclick="setCCMode('area')">مساحت مستقیم</button>
+      </div>
+
+      <div id="cc-count" class="mode-box">
+        <div class="field-row triple">
+          <div><label>قطر میلگرد (mm)</label>
+            <select id="ccDia">
+              <option>8</option><option>10</option><option>12</option><option selected>14</option>
+              <option>16</option><option>18</option><option>20</option><option>22</option>
+              <option>25</option><option>28</option><option>32</option>
+            </select>
+          </div>
+          <div><label>تعداد میلگرد</label><input type="number" id="ccCount" value="8" min="1" step="1"></div>
+          <div></div>
+        </div>
+      </div>
+
+      <div id="cc-area" class="mode-box" hidden>
+        <div class="field-row">
+          <label>مساحت کل آرماتور (cm²)</label>
+          <input type="number" id="ccAs" value="16" min="0" step="0.1">
+        </div>
+      </div>
+
+      <button class="neon-btn" onclick="calcColCheck()">بررسی درصد آرماتور</button>
+      <div class="result-box" id="ccResult" hidden></div>
+    </div>
+  </section>
+
+  <!-- ============ 11) SLOPE / GRADE ============ -->
+  <section id="view-slope" class="view">
+    <div class="panel">
+      <div class="field-row triple">
+        <div><label>اختلاف ارتفاع - رایز (m)</label><input type="number" id="slRise" value="1.5" min="0" step="0.01"></div>
+        <div><label>فاصله افقی - ران (m)</label><input type="number" id="slRun" value="20" min="0.01" step="0.01"></div>
+        <div></div>
+      </div>
+      <button class="neon-btn" onclick="calcSlope()">محاسبه شیب</button>
+      <div class="result-box" id="slResult" hidden></div>
+    </div>
+  </section>
+
+  <!-- ============ 12) EARTHWORK CUT & FILL ============ -->
+  <section id="view-earthwork" class="view">
+    <div class="panel">
+      <div class="field-row triple">
+        <div><label>مساحت محدوده (m²)</label><input type="number" id="ewArea" value="500" min="0" step="1"></div>
+        <div><label>عمق میانگین خاکبرداری - برش (m)</label><input type="number" id="ewCut" value="1.2" min="0" step="0.05"></div>
+        <div><label>عمق میانگین خاکریزی - پر (m)</label><input type="number" id="ewFill" value="0.6" min="0" step="0.05"></div>
+      </div>
+      <div class="field-row triple">
+        <div><label>ضریب تورم خاک - Swell (%)</label><input type="number" id="ewSwell" value="25" min="0" step="1"></div>
+        <div><label>ضریب تراکم/انقباض - Shrink (%)</label><input type="number" id="ewShrink" value="10" min="0" step="1"></div>
+        <div></div>
+      </div>
+      <button class="neon-btn" onclick="calcEarthwork()">محاسبه حجم</button>
+      <div class="result-box" id="ewResult" hidden></div>
+    </div>
+  </section>
+
+  <!-- ============ 13) BANK INTEREST / INVESTMENT ============ -->
+  <section id="view-bank" class="view">
+    <div class="panel">
+      <div class="tabs">
+        <button class="tab active" data-mode="simple" onclick="setBankMode('simple')">سود ساده (سپرده بانکی)</button>
+        <button class="tab" data-mode="compound" onclick="setBankMode('compound')">سود مرکب (سرمایه‌گذاری)</button>
+      </div>
+
+      <div id="bank-simple" class="mode-box">
+        <div class="field-row">
+          <label>اصل سرمایه (تومان)</label>
+          <input type="text" inputmode="numeric" id="bkPrincipal" value="100,000,000" oninput="formatThousands(this)" style="direction:ltr;text-align:right">
+        </div>
+        <div class="field-row triple">
+          <div><label>نرخ سود سالانه (%)</label><input type="number" id="bkRate" value="23" min="0" step="0.1"></div>
+          <div>
+            <label>مدت سرمایه‌گذاری</label>
+            <div class="field-row" style="gap:6px">
+              <input type="number" id="bkDuration" value="12" min="0" step="1">
+              <select id="bkDurUnit"><option value="month" selected>ماه</option><option value="year">سال</option></select>
+            </div>
+          </div>
+        </div>
+        <button class="neon-btn" onclick="calcBankSimple()">محاسبه سود ساده</button>
+        <div class="result-box" id="bkSimpleResult" hidden></div>
+      </div>
+
+      <div id="bank-compound" class="mode-box" hidden>
+        <div class="field-row">
+          <label>اصل سرمایه (تومان)</label>
+          <input type="text" inputmode="numeric" id="cpPrincipal" value="100,000,000" oninput="formatThousands(this)" style="direction:ltr;text-align:right">
+        </div>
+        <div class="field-row triple">
+          <div><label>نرخ سود سالانه اسمی (%)</label><input type="number" id="cpRate" value="23" min="0" step="0.1"></div>
+          <div><label>دوره تناوب سود</label>
+            <select id="cpFreq">
+              <option value="12" selected>ماهانه</option>
+              <option value="4">فصلی</option>
+              <option value="2">شش‌ماهه</option>
+              <option value="1">سالانه</option>
+            </select>
+          </div>
+        </div>
+        <div class="field-row triple">
+          <div><label>مدت سرمایه‌گذاری (سال)</label><input type="number" id="cpYears" value="3" min="0" step="0.5"></div>
+          <div><label>واریز ماهانه اضافی (تومان)</label><input type="text" inputmode="numeric" id="cpMonthly" value="0" oninput="formatThousands(this)" style="direction:ltr;text-align:right"></div>
+        </div>
+        <button class="neon-btn" onclick="calcBankCompound()">محاسبه سود مرکب</button>
+        <div class="result-box" id="cpResult" hidden></div>
+        <div class="ref-table" id="cpTable" style="margin-top:12px"></div>
+      </div>
+
+      <p class="disclaimer" style="margin-top:14px">
+        <svg class="ic ic-sm"><use href="#ic-info"/></svg>
+        این محاسبه صرفاً جنبه آموزشی و برآوردی دارد و جایگزین نرخ‌های مصوب بانک مرکزی یا مشاوره مالی رسمی نیست.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 14) PARKING STANDARDS ============ -->
+  <section id="view-parking" class="view">
+    <div class="panel">
+      <h3 class="ref-h">ابعاد و شیب رمپ پارکینگ</h3>
+      <div class="ref-table" id="refParkingDim"></div>
+
+      <h3 class="ref-h">برآورد سریع تعداد پارکینگ مورد نیاز</h3>
+      <div class="field-row triple">
+        <div><label>کاربری</label>
+          <select id="pkUse">
+            <option value="120" selected>مسکونی (هر واحد ~۱۲۰ m²)</option>
+            <option value="60">اداری (هر ۶۰ m² زیربنا)</option>
+            <option value="50">تجاری (هر ۵۰ m² زیربنا)</option>
+            <option value="1">تعداد واحد مستقیم (مسکونی)</option>
+          </select>
+        </div>
+        <div><label>زیربنای کل یا تعداد واحد</label><input type="number" id="pkArea" value="1200" min="0" step="10"></div>
+        <div><label>نسبت پارکینگ به واحد/سرانه</label><input type="number" id="pkRatio" value="1" min="0" step="0.1"></div>
+      </div>
+      <button class="neon-btn" onclick="calcParking()">برآورد تعداد پارکینگ</button>
+      <div class="result-box" id="pkResult" hidden></div>
+      <p class="disclaimer" style="margin-top:10px">
+        <svg class="ic ic-sm"><use href="#ic-info"/></svg>
+        ضوابط دقیق پارکینگ (سرانه، معافیت‌ها و تراکم) بر اساس ضوابط شهرداری و طرح تفصیلی هر منطقه متفاوت است؛ این برآورد صرفاً جهت مرور اولیه است.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 15) KEY NUMBERS CHEAT SHEET ============ -->
+  <section id="view-keynums" class="view">
+    <div class="panel">
+      <h3 class="ref-h">پله</h3>
+      <div class="ref-table" id="refStairNums"></div>
+
+      <h3 class="ref-h">ارتفاع مفید طبقات (m)</h3>
+      <div class="ref-table" id="refHeights"></div>
+
+      <h3 class="ref-h">بار زنده استاندارد کاربری‌ها (kg/m²)</h3>
+      <div class="ref-table" id="refLiveLoads"></div>
+
+      <h3 class="ref-h">ابعاد در، راهرو و نرده</h3>
+      <div class="ref-table" id="refDoors"></div>
+
+      <h3 class="ref-h">مقاومت متداول بتن و فولاد</h3>
+      <div class="ref-table" id="refMaterials"></div>
+    </div>
+  </section>
+
+  <!-- ============ 16) SEISMIC COEFFICIENT (STD 2800 ed.5) ============ -->
+  <section id="view-seismic" class="view">
+    <div class="panel">
+
+      <h3 class="ref-h">اهمیت سازه (Ie)</h3>
+      <div class="field-row">
+        <select id="seisIe" onchange="seisSoilUI()">
+          <option value="0">سازه با اهمیت متوسط (Ie = 1.0)</option>
+          <option value="1">سازه با اهمیت کم (Ie = 0.8)</option>
+          <option value="2">سازه با اهمیت زیاد (Ie = 1.2)</option>
+          <option value="3">سازه با اهمیت خیلی زیاد (Ie = 1.4)</option>
+        </select>
+      </div>
+
+      <h3 class="ref-h">پارامترهای لرزه‌ای (Ss و S1)</h3>
+      <div class="field-row triple">
+        <div><label>مقدار Ss (g)</label><input type="number" id="seisSs" inputmode="decimal" step="any" min="0" placeholder="مثلاً 1.0"></div>
+        <div><label>مقدار S1 (g)</label><input type="number" id="seisS1" inputmode="decimal" step="any" min="0" placeholder="مثلاً 0.4"></div>
+      </div>
+      <div class="seis-note">مطابق نقشه‌های پیوست آیین‌نامه (ویرایش ۵)، مقادیر Ss و S1 را بر حسب محل سازه و سایت پروژه استخراج و وارد نمایید.</div>
+
+      <h3 class="ref-h">نوع زمین (ساختگاه)</h3>
+      <div class="field-row">
+        <select id="seisSoil" onchange="seisSoilUI()">
+          <option value="0">نوع I</option>
+          <option value="1">نوع II</option>
+          <option value="2">نوع III</option>
+          <option value="3">نوع IV</option>
+          <option value="4">نوع V</option>
+          <option value="5">نوع VI (طیف ویژه)</option>
+        </select>
+      </div>
+      <label class="chk-row" id="seisVsRow">
+        <input type="checkbox" id="seisVs">
+        <span>برای ساختگاه نوع I، سرعت موج برشی با آزمایش (حداقل ۳ اندازه‌گیری) تعیین شده است (ضرایب Fs، F1 و F_PGA در 0.9 ضرب می‌شوند)</span>
+      </label>
+      <div id="seisManualBox" hidden>
+        <div class="seis-note" id="seisSoilNote"></div>
+        <label class="chk-row" id="seisManualToggle" hidden>
+          <input type="checkbox" id="seisManualOn" onchange="seisSoilUI()">
+          <span>ورود دستی ضرایب (به‌جای مقادیر جدول)</span>
+        </label>
+        <div class="field-row triple" id="seisManualFields">
+          <div><label>Fs</label><input type="number" id="seisManFs" inputmode="decimal" step="any" placeholder="ورود دستی Fs" disabled></div>
+          <div><label>F1</label><input type="number" id="seisManF1" inputmode="decimal" step="any" placeholder="ورود دستی F1" disabled></div>
+          <div><label>F_PGA</label><input type="number" id="seisManFpga" inputmode="decimal" step="any" placeholder="ورود دستی F_PGA" disabled></div>
+        </div>
+      </div>
+
+      <h3 class="ref-h">مشخصات سازه و ضریب رفتار Ru</h3>
+      <div class="field-row">
+        <label>سیستم سازه‌ای (جهت محاسبه T)</label>
+        <select id="seisSys">
+          <option value="0">قاب خمشی فولادی و مختلط (بدون مانع میانقاب)</option>
+          <option value="1">قاب خمشی بتن آرمه (بدون مانع میانقاب)</option>
+          <option value="2">سیستم مهاربندی شده واگرا یا کمانش تاب و دوگانه (بدون مانع میانقاب)</option>
+          <option value="3">انواع سیستم قاب خمشی یا مهاربندی شده (میانقاب مانع ایجاد می‌کند)</option>
+          <option value="4">سایر سیستم‌ها</option>
+        </select>
+      </div>
+      <div class="field-row">
+        <label>ارتفاع سازه H (متر)</label>
+        <input type="number" id="seisH" inputmode="decimal" step="any" min="0" placeholder="مثلاً 30">
+      </div>
+      <div class="field-row">
+        <label>گروه سیستم مقاوم (جهت محاسبه Ru)</label>
+        <select id="seisRuCat" onchange="seisRuCatChange()"></select>
+      </div>
+      <div class="field-row">
+        <label>نوع سیستم مقاوم</label>
+        <select id="seisRuType" onchange="seisRuTypeChange()"></select>
+      </div>
+      <div class="field-row">
+        <label>مقدار ضریب Ru (با انتخاب نوع سیستم پر می‌شود؛ قابل ویرایش)</label>
+        <input type="number" id="seisRu" inputmode="decimal" step="any" min="0" placeholder="مثلاً 6.5">
+      </div>
+
+      <h3 class="ref-h">پریود تحلیلی (اختیاری)</h3>
+      <label class="chk-row">
+        <input type="checkbox" id="seisT2On" onchange="seisT2Toggle()">
+        <span>اعمال پریود تحلیلی (T2 نرم‌افزار)</span>
+      </label>
+      <div class="field-row">
+        <input type="number" id="seisT2" inputmode="decimal" step="any" min="0" placeholder="مقدار T2 (ثانیه)" disabled>
+      </div>
+      <div class="seis-note">در صورتی‌که هنوز پریود تحلیلی (T2) در دسترس نیست و می‌خواهید موقتاً با ۱.۴ برابر پریود تجربی ادامه دهید (این مقدار جایگزین T شده و در محاسبات K، Sa، C و... اعمال می‌شود)، گزینه‌ی زیر را فعال کنید. این گزینه با «اعمال پریود تحلیلی» هم‌زمان قابل استفاده نیست.</div>
+      <label class="chk-row">
+        <input type="checkbox" id="seisT14" onchange="seisT14Toggle()">
+        <span>استفاده از ۱.۴ برابر پریود تجربی (T) به‌جای پریود تحلیلی</span>
+      </label>
+
+      <h3 class="ref-h">تنظیمات اختیاری (ویژه دریفت)</h3>
+      <div class="field-row">
+        <label>پریود دریفت T_drift (ثانیه)</label>
+        <input type="number" id="seisTd" inputmode="decimal" step="any" min="0" placeholder="در صورت نیاز وارد کنید...">
+      </div>
+
+      <button class="neon-btn" onclick="calcSeismic()">محاسبه ضریب زلزله (C) و رسم طیف</button>
+
+      <div class="result-box" id="seisResult" hidden></div>
+      <div id="seisChartBox" class="seis-chartbox" hidden></div>
+
+      <p class="disclaimer" style="margin-top:14px">
+        <svg class="ic ic-sm"><use href="#ic-info"/></svg>
+        محاسبات بر مبنای استاندارد ۲۸۰۰ ویرایش ۵ و با پریود انتقال T_L = 6 ثانیه انجام می‌شود. این ابزار برای کنترل سریع طراحی شده و جایگزین محاسبات مهندس طراح و ناظر نیست.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 10) GUIDE / ABOUT ============ -->
+  <section id="view-guide" class="view">
+    <div class="panel">
+      <h3 class="ref-h">درباره برنامه</h3>
+      <p class="guide-text">
+        دستیار مهندسی ارکانی عمران یک جعبه‌ابزار محاسباتی برای برآورد سریع پارامترهای پرکاربرد در پروژه‌های عمرانی است؛
+        شامل طرح اختلاط بتن، وزن مقاطع فولادی، آرماتور دال و ستون، حجم اعضای بتنی، بارگذاری سازه، محاسبه پله و تبدیل واحد.
+        نتایج این ابزار صرفاً برای برآورد اولیه و کنترل سریع محاسبات است و جایگزین محاسبات دقیق مهندس طراح و ناظر نمی‌شود.
+      </p>
+
+      <h3 class="ref-h">راهنمای ابزارها</h3>
+      <div class="ref-table">
+        <div class="ref-row"><span>طرح اختلاط بتن</span><span>برآورد سیمان، ماسه، شن و آب</span></div>
+        <div class="ref-row"><span>وزن مقاطع فولادی</span><span>میلگرد، ورق و پروفیل IPE</span></div>
+        <div class="ref-row"><span>آرماتور دال / عضو</span><span>تعداد و وزن میلگرد با فاصله دلخواه</span></div>
+        <div class="ref-row"><span>حجم اعضای بتنی</span><span>دال، تیر، ستون و فونداسیون</span></div>
+        <div class="ref-row"><span>تبدیل واحد مهندسی</span><span>طول، سطح، حجم، نیرو و تنش</span></div>
+        <div class="ref-row"><span>مرجع سریع</span><span>چگالی مصالح و جداول استاندارد</span></div>
+        <div class="ref-row"><span>بارگذاری سازه</span><span>بار سرویس و بار نهایی طراحی</span></div>
+        <div class="ref-row"><span>محاسبه پله</span><span>تعداد، ارتفاع و کف‌پله (فرمول بلوندل)</span></div>
+        <div class="ref-row"><span>آرماتور ستون</span><span>درصد آرماتور طولی نسبت به مقطع</span></div>
+        <div class="ref-row"><span>محاسبه شیب و گرادیان</span><span>درصد شیب، زاویه و نسبت 1:n</span></div>
+        <div class="ref-row"><span>خاکبرداری و خاکریزی</span><span>حجم برش و پر با ضرایب تورم و تراکم</span></div>
+        <div class="ref-row"><span>سود بانکی و سرمایه‌گذاری</span><span>سود ساده و مرکب، ماهانه، سالانه و APY</span></div>
+        <div class="ref-row"><span>ضوابط پارکینگ</span><span>ابعاد، شیب رمپ و برآورد تعداد پارکینگ</span></div>
+        <div class="ref-row"><span>اعداد کلیدی عمران و معماری</span><span>پله، بار زنده، ارتفاع طبقات و مصالح</span></div>
+        <div class="ref-row"><span>ضریب زلزله استاتیکی (۲۸۰۰)</span><span>C، Sa، K، SDC و رسم طیف طرح ویرایش ۵</span></div>
+      </div>
+
+      <h3 class="ref-h">مجموعه ارکانی عمران</h3>
+      <p class="guide-text">
+        این برنامه توسط مجموعه ارکانی عمران طراحی و توسعه داده شده است. برای مشاهده آموزش‌ها، محتوای تخصصی
+        و ارتباط با ما، از طریق شبکه‌های زیر همراه ما باشید.
+      </p>
+      <div class="social-grid">
+        <a class="social-btn" href="https://www.arkaniomran.ir" target="_blank" rel="noopener" style="--sc:0,230,200">
+          <span class="social-ic-wrap"><svg class="ic"><use href="#ic-globe"/></svg></span>
+          <span>وب‌سایت</span>
+        </a>
+        <a class="social-btn" href="https://ble.ir/arkaniomran" target="_blank" rel="noopener" style="--sc:0,163,224">
+          <span class="social-ic-wrap"><svg class="ic"><use href="#ic-bale"/></svg></span>
+          <span>بله</span>
+        </a>
+        <a class="social-btn" href="https://www.aparat.com/arkaniomran" target="_blank" rel="noopener" style="--sc:237,28,36">
+          <span class="social-ic-wrap"><svg class="ic"><use href="#ic-play"/></svg></span>
+          <span>آپارات</span>
+        </a>
+        <a class="social-btn" href="https://www.youtube.com/@arkaniomran" target="_blank" rel="noopener" style="--sc:255,0,0">
+          <span class="social-ic-wrap"><svg class="ic"><use href="#ic-ytplay"/></svg></span>
+          <span>یوتیوب</span>
+        </a>
+        <a class="social-btn" href="https://www.instagram.com/arkaniomran?igsh=eDQxbDR3ZnZibncx" target="_blank" rel="noopener" style="--sc:225,48,108">
+          <span class="social-ic-wrap"><svg class="ic"><use href="#ic-camera"/></svg></span>
+          <span>اینستاگرام</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">دستیار مهندسی ارکانی عمران · طراحی و توسعه توسط مجموعه ارکانی عمران · www.arkaniomran.ir</footer>
+
+<style>
+:root{
+  --radius: 16px;
+  --radius-sm: 10px;
+  --ff-body: 'Vazirmatn', sans-serif;
+  --ff-mono: 'IBM Plex Mono', monospace;
+}
+html[data-theme="dark"]{
+  --bg: #060a10;
+  --bg2: #081019;
+  --surface: #0e161f;
+  --surface2: #121b26;
+  --border: rgba(0, 230, 208, .28);
+  --border-soft: rgba(255,255,255,.07);
+  --text: #dfeaf0;
+  --text-dim: #7f95a3;
+  --neon: #00e6c8;
+  --neon2: #ff8a3d;
+  --neon-rgb: 0,230,200;
+  --neon2-rgb: 255,138,61;
+  --grid-line: rgba(0,230,200,.05);
+  --shadow-card: 0 0 0 1px var(--border), 0 8px 24px rgba(0,0,0,.45);
+}
+html[data-theme="light"]{
+  --bg: #eef2f5;
+  --bg2: #e6ecf0;
+  --surface: #ffffff;
+  --surface2: #f4f7f9;
+  --border: rgba(0,120,140,.35);
+  --border-soft: rgba(0,0,0,.08);
+  --text: #132029;
+  --text-dim: #5c6d78;
+  --neon: #007b8f;
+  --neon2: #cc5a08;
+  --neon-rgb: 0,123,143;
+  --neon2-rgb: 204,90,8;
+  --grid-line: rgba(0,120,140,.07);
+  --shadow-card: 0 0 0 1px var(--border), 0 8px 20px rgba(20,40,50,.08);
+}
+
+*{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+html,body{margin:0; padding:0; height:100%;}
+body{
+  font-family: var(--ff-body);
+  background:
+    linear-gradient(var(--grid-line) 1px, transparent 1px) 0 0/28px 28px,
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px) 0 0/28px 28px,
+    radial-gradient(1200px 500px at 50% -10%, rgba(var(--neon-rgb),.10), transparent 60%),
+    var(--bg);
+  color: var(--text);
+  min-height:100vh;
+  position:relative;
+  transition: background-color .35s ease, color .35s ease;
+  overflow-x:hidden;
+}
+body::before, body::after{
+  content:""; position:fixed; width:480px; height:480px; border-radius:50%;
+  filter: blur(100px); z-index:-1; pointer-events:none; opacity:.28;
+}
+body::before{ top:-140px; inset-inline-end:-140px; background: rgb(var(--neon-rgb)); animation: aura1 15s ease-in-out infinite; }
+body::after{ bottom:-160px; inset-inline-start:-140px; background: rgb(var(--neon2-rgb)); animation: aura2 18s ease-in-out infinite; }
+@keyframes aura1{ 0%,100%{ transform:translate(0,0) scale(1);} 50%{ transform:translate(-26px,26px) scale(1.08);} }
+@keyframes aura2{ 0%,100%{ transform:translate(0,0) scale(1);} 50%{ transform:translate(26px,-18px) scale(1.08);} }
+
+.scanline{
+  position:fixed; top:0; left:0; right:0; height:2px;
+  background: linear-gradient(90deg, transparent, var(--neon), transparent);
+  box-shadow: 0 0 12px 1px var(--neon);
+  animation: scan 6s linear infinite;
+  opacity:.75; z-index:50; pointer-events:none;
+}
+@keyframes scan{
+  0%{ transform: translateX(-100%);}
+  100%{ transform: translateX(100%);}
+}
+@media (prefers-reduced-motion: reduce){
+  .scanline{animation:none; display:none;}
+  body::before, body::after{ animation:none; }
+  .neon-btn{ animation:none; }
+  .social-btn::before{ animation:none; display:none; }
+  .brand-ic{ animation:none; }
+}
+
+.topbar{
+  position:sticky; top:0; z-index:40;
+  display:flex; align-items:center; gap:12px;
+  padding:14px 16px;
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom:1px solid var(--border-soft);
+}
+.brand{display:flex; align-items:center; gap:10px; flex:1; min-width:0;}
+.brand-ic{width:26px; height:26px; color:var(--neon); filter:drop-shadow(0 0 6px rgba(var(--neon-rgb),.6)); animation: iconPulse 3.4s ease-in-out infinite;}
+@keyframes iconPulse{ 0%,100%{ filter:drop-shadow(0 0 6px rgba(var(--neon-rgb),.6)); } 50%{ filter:drop-shadow(0 0 12px rgba(var(--neon-rgb),.95)); } }
+.brand-txt{display:flex; flex-direction:column; line-height:1.3; min-width:0;}
+.brand-title{
+  font-weight:800; font-size:16px; letter-spacing:.2px;
+  background: linear-gradient(90deg, var(--neon), var(--neon2));
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.brand-sub{font-size:11px; color:var(--text-dim); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+
+.icon-btn{
+  width:40px; height:40px; border-radius:12px; flex:none;
+  background: var(--surface2);
+  border:1px solid var(--border-soft);
+  color:var(--text); display:flex; align-items:center; justify-content:center;
+  cursor:pointer; transition:.2s;
+}
+.icon-btn:hover{ border-color:var(--border); box-shadow:0 0 12px rgba(var(--neon-rgb),.25); color:var(--neon); }
+.icon-btn .ic{width:19px; height:19px;}
+.theme-btn .ic{width:20px; height:20px;}
+
+.ic{width:24px; height:24px;}
+.ic-sm{width:16px; height:16px; flex:none;}
+
+main{ padding:18px 16px 40px; max-width:640px; margin:0 auto; }
+
+.view{ display:none; animation: rise .35s ease; }
+.view.active{ display:block; }
+@keyframes rise{ from{opacity:0; transform:translateY(8px);} to{opacity:1; transform:none;} }
+
+.grid-cards{
+  display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:6px;
+}
+.card{
+  position:relative; text-align:right; cursor:pointer;
+  background: var(--surface);
+  border:1px solid var(--border-soft);
+  border-radius: var(--radius);
+  padding:18px 14px 16px;
+  display:flex; flex-direction:column; gap:8px; align-items:flex-start;
+  box-shadow: var(--shadow-card);
+  overflow:hidden;
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+  font-family:inherit; color:var(--text);
+}
+.card::before, .card::after{
+  content:""; position:absolute; width:14px; height:14px; border-color:var(--neon); opacity:0; transition:.25s;
+}
+.card::before{ top:6px; right:6px; border-top:2px solid; border-right:2px solid; }
+.card::after{ bottom:6px; left:6px; border-bottom:2px solid; border-left:2px solid; }
+.card:hover, .card:focus-visible{
+  transform: translateY(-3px);
+  border-color: var(--border);
+  box-shadow: 0 0 0 1px var(--border), 0 0 22px rgba(var(--neon-rgb),.28), 0 10px 24px rgba(0,0,0,.3);
+}
+.card:hover::before, .card:hover::after,
+.card:focus-visible::before, .card:focus-visible::after{ opacity:1; }
+.card-glow{
+  position:absolute; inset:-40% -40% auto auto; width:70%; height:70%;
+  background: radial-gradient(circle, rgba(var(--neon-rgb),.18), transparent 70%);
+  pointer-events:none;
+}
+.card-ic{ width:34px; height:34px; color:var(--neon); filter:drop-shadow(0 0 8px rgba(var(--neon-rgb),.5)); transition: transform .3s ease, filter .3s ease; }
+.card:hover .card-ic, .card:focus-visible .card-ic{ transform: translateY(-2px) scale(1.08); filter:drop-shadow(0 0 14px rgba(var(--neon-rgb),.85)); }
+.card-title{ font-weight:700; font-size:14.5px; }
+.card-desc{ font-size:11.5px; color:var(--text-dim); line-height:1.5; }
+
+.disclaimer{
+  margin-top:22px; display:flex; gap:8px; align-items:flex-start;
+  font-size:12px; color:var(--text-dim); line-height:1.7;
+  padding:12px 14px; border-radius:12px; background:var(--surface2); border:1px solid var(--border-soft);
+}
+.disclaimer .ic-sm{ color: var(--neon2); margin-top:2px; }
+
+.panel{
+  background:var(--surface); border:1px solid var(--border-soft); border-radius:var(--radius);
+  padding:18px; box-shadow:var(--shadow-card);
+}
+.field-row{ margin-bottom:14px; display:flex; flex-direction:column; gap:6px; }
+.field-row label{ font-size:12.5px; color:var(--text-dim); font-weight:600; }
+.field-row.triple{ flex-direction:row; gap:10px; }
+.field-row.triple > div{ flex:1; display:flex; flex-direction:column; gap:6px; }
+.conv-row{ align-items:end; }
+
+input, select{
+  font-family: var(--ff-mono), var(--ff-body);
+  background:var(--surface2); color:var(--text);
+  border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  padding:10px 12px; font-size:14px; width:100%;
+  outline:none; transition:.2s;
+}
+input:focus, select:focus{
+  border-color:var(--neon); box-shadow:0 0 0 3px rgba(var(--neon-rgb),.15);
+}
+
+.neon-btn{
+  position:relative; width:100%; margin-top:4px; padding:13px 18px; font-family:inherit; font-weight:700; font-size:15px;
+  color: var(--bg); background: var(--neon);
+  border:none; border-radius:var(--radius-sm); cursor:pointer; overflow:hidden;
+  box-shadow: 0 0 14px rgba(var(--neon-rgb),.55), 0 0 0 1px rgba(var(--neon-rgb),.4) inset;
+  transition: transform .15s ease, box-shadow .15s ease;
+  letter-spacing:.2px;
+  animation: btnGlow 2.6s ease-in-out infinite;
+}
+.neon-btn:hover{ box-shadow:0 0 22px rgba(var(--neon-rgb),.8), 0 0 0 1px rgba(var(--neon-rgb),.6) inset; transform:translateY(-1px); animation-play-state:paused; }
+.neon-btn:active{ transform:translateY(0); }
+@keyframes btnGlow{
+  0%,100%{ box-shadow: 0 0 14px rgba(var(--neon-rgb),.55), 0 0 0 1px rgba(var(--neon-rgb),.4) inset; }
+  50%{ box-shadow: 0 0 24px rgba(var(--neon-rgb),.85), 0 0 0 1px rgba(var(--neon-rgb),.6) inset; }
+}
+
+.tabs{ display:flex; gap:8px; margin-bottom:16px; flex-wrap:wrap; }
+.tab{
+  flex:1; min-width:80px; padding:9px 10px; text-align:center; cursor:pointer; font-family:inherit; font-size:12.5px; font-weight:700;
+  background:var(--surface2); color:var(--text-dim); border:1px solid var(--border-soft); border-radius:10px; transition:.2s;
+}
+.tab.active{ color:var(--bg); background:var(--neon2); border-color:var(--neon2); box-shadow:0 0 12px rgba(var(--neon2-rgb),.5); }
+
+.mode-box{ animation: rise .25s ease; }
+
+.result-box{
+  margin-top:18px; padding:14px 16px; border-radius:var(--radius-sm);
+  background: var(--surface2); border:1px solid var(--border);
+  font-family: var(--ff-mono), var(--ff-body); font-size:13.5px; line-height:2;
+  box-shadow: 0 0 18px rgba(var(--neon-rgb),.12) inset;
+}
+.result-box b{ color:var(--neon); font-weight:700; }
+.result-row{ display:flex; justify-content:space-between; gap:10px; border-bottom:1px dashed var(--border-soft); padding:4px 0; }
+.result-row:last-child{ border-bottom:none; }
+.result-row span:first-child{ color:var(--text-dim); font-family:var(--ff-body); }
+
+.ref-h{ font-size:13.5px; margin:20px 0 8px; color:var(--neon); }
+.ref-h:first-child{ margin-top:0; }
+.ref-table{ display:flex; flex-direction:column; gap:0; border:1px solid var(--border-soft); border-radius:10px; overflow:hidden; }
+.ref-row{ display:flex; justify-content:space-between; padding:8px 12px; font-size:13px; font-family:var(--ff-mono), var(--ff-body); }
+.ref-row:nth-child(odd){ background:var(--surface2); }
+.ref-row span:first-child{ color:var(--text-dim); font-family:var(--ff-body); }
+
+.guide-text{ font-size:13px; line-height:2; color:var(--text-dim); margin:0 0 4px; }
+
+.social-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:4px; }
+.social-btn{
+  position:relative; display:flex; flex-direction:column; align-items:center; gap:9px;
+  padding:16px 6px 13px; text-decoration:none; color:var(--text); font-family:inherit;
+  background:var(--surface2); border:1px solid var(--border-soft); border-radius:14px;
+  overflow:hidden; isolation:isolate;
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.social-btn span:last-child{ font-size:11.5px; font-weight:700; }
+.social-ic-wrap{
+  position:relative; z-index:1; width:42px; height:42px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  background: radial-gradient(circle at 32% 28%, rgba(var(--sc),.4), rgba(var(--sc),.08));
+  color: rgb(var(--sc)); box-shadow: 0 0 0 1px rgba(var(--sc),.4) inset;
+  transition: box-shadow .25s ease, transform .25s ease;
+}
+.social-ic-wrap .ic{ width:21px; height:21px; }
+.social-btn::before{
+  content:""; position:absolute; top:0; left:-60%; width:35%; height:100%; z-index:2;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,.45), transparent);
+  transform: skewX(-20deg); pointer-events:none;
+  animation: shimmer 3.6s ease-in-out infinite;
+}
+.social-btn:nth-child(2)::before{ animation-delay:.6s; }
+.social-btn:nth-child(3)::before{ animation-delay:1.2s; }
+.social-btn:nth-child(4)::before{ animation-delay:1.8s; }
+.social-btn:nth-child(5)::before{ animation-delay:2.4s; }
+.social-btn:hover, .social-btn:focus-visible{
+  transform:translateY(-3px); border-color:rgba(var(--sc),.55);
+  box-shadow:0 0 18px rgba(var(--sc),.35), 0 8px 18px rgba(0,0,0,.25);
+}
+.social-btn:hover .social-ic-wrap, .social-btn:focus-visible .social-ic-wrap{
+  box-shadow:0 0 16px rgba(var(--sc),.75), 0 0 0 1px rgba(var(--sc),.65) inset; transform:scale(1.08);
+}
+@keyframes shimmer{
+  0%{ left:-60%; }
+  55%{ left:130%; }
+  100%{ left:130%; }
+}
+@media (max-width:380px){ .social-grid{ grid-template-columns:repeat(2,1fr); } }
+
+.foot{ text-align:center; padding:18px; font-size:11px; color:var(--text-dim); opacity:.7; }
+
+@media (max-width:380px){
+  .grid-cards{ grid-template-columns:1fr 1fr; gap:10px; }
+  .card{ padding:14px 10px; }
+}
+
+/* ---- seismic tool ---- */
+.chk-row{ display:flex; gap:10px; align-items:flex-start; font-size:12.5px; color:var(--text-dim); line-height:1.9; margin:0 0 14px; cursor:pointer; }
+.chk-row input[type="checkbox"]{ width:18px; height:18px; padding:0; flex:none; margin:4px 0 0; accent-color:var(--neon); }
+#view-seismic [hidden]{ display:none !important; }
+.seis-note{ font-size:12px; line-height:1.9; padding:10px 12px; border-radius:10px; background:var(--surface2); border:1px solid var(--border-soft); color:var(--text-dim); margin:0 0 14px; }
+.seis-note.warn{ border-color:rgba(var(--neon2-rgb),.65); color:var(--text); }
+.seis-h{ font-family:var(--ff-body); font-weight:700; font-size:13px; color:var(--neon2); margin:14px 0 2px; padding-bottom:3px; border-bottom:1px solid var(--border-soft); line-height:1.7; }
+.seis-h:first-child{ margin-top:0; }
+.seis-f{ font-family:var(--ff-mono), var(--ff-body); font-size:11.5px; line-height:1.8; color:var(--text-dim); padding:0 0 6px; overflow-wrap:anywhere; }
+.result-row.hl b{ color:var(--neon2); font-size:15px; }
+.seis-err{ color:var(--neon2); font-family:var(--ff-body); line-height:1.9; }
+.seis-chartbox{ margin-top:18px; padding:14px 12px 12px; border-radius:var(--radius-sm); background:var(--surface2); border:1px solid var(--border); }
+.seis-chartbox .ref-h{ margin-top:0; }
+.seis-chart{ max-width:560px; margin:0 auto; }
+</style>
+
+<script>
+/* ---------- theme ---------- */
+let currentTheme = 'dark';
+function toggleTheme(){
+  currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', currentTheme);
+  document.getElementById('themeIconSun').hidden = currentTheme !== 'light';
+  document.getElementById('themeIconMoon').hidden = currentTheme !== 'dark';
+}
+
+/* ---------- navigation ---------- */
+const titles = {
+  home:  ['دستیار مهندسی ارکانی عمران','جعبه‌ابزار محاسبات سریع مهندسی عمران'],
+  mix:   ['طرح اختلاط بتن','برآورد مصالح بر اساس نسبت حجمی'],
+  steel: ['وزن مقاطع فولادی','میلگرد، ورق و پروفیل IPE'],
+  rebar: ['آرماتور عضو','تعداد و وزن میلگرد در دال یا عضو'],
+  volume:['حجم اعضای بتنی','دال، تیر، ستون و فونداسیون'],
+  convert:['تبدیل واحد مهندسی','طول، حجم، نیرو و تنش'],
+  ref:   ['مرجع سریع','چگالی مصالح و جداول استاندارد'],
+  load:  ['بارگذاری سازه','بار سرویس، بار نهایی و بار خطی تیر'],
+  stairs:['محاسبه پله','تعداد، ارتفاع و کف‌پله (فرمول بلوندل)'],
+  colcheck:['آرماتور ستون','بررسی درصد آرماتور طولی نسبت به مقطع'],
+  slope: ['محاسبه شیب و گرادیان','درصد شیب، زاویه و نسبت برای رمپ و مسیر'],
+  earthwork: ['خاکبرداری و خاکریزی','حجم برش، پر و ضرایب تورم/تراکم خاک'],
+  bank: ['سود بانکی و سرمایه‌گذاری','سود ساده و مرکب، ماهانه، سالانه و نرخ موثر'],
+  parking: ['ضوابط پارکینگ','ابعاد، شیب رمپ و برآورد تعداد پارکینگ'],
+  keynums: ['اعداد کلیدی عمران و معماری','ابعاد پله، بار زنده، ارتفاع طبقات و مقادیر پرکاربرد'],
+  seismic: ['ضریب زلزله استاتیکی','استاندارد ۲۸۰۰ ویرایش ۵ · C، Sa، K، SDC و طیف طرح'],
+  guide: ['راهنما و درباره برنامه','آموزش استفاده و معرفی ارکانی عمران']
+};
+function renderView(id){
+  document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
+  document.getElementById('view-'+id).classList.add('active');
+  document.getElementById('pageTitle').textContent = titles[id][0];
+  document.getElementById('pageSub').textContent = titles[id][1];
+  document.getElementById('backBtn').hidden = (id === 'home');
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+function showTool(id){
+  renderView(id);
+  history.pushState({view:id}, '', '#'+id);
+}
+function goHome(){
+  // به‌جای رفتن مستقیم به خانه، یک گام در تاریخچه به عقب می‌رویم
+  // تا دکمه/ژست بازگشت اندروید هم دقیقاً همین رفتار را داشته باشد
+  // (خروج ناگهانی از برنامه رخ نمی‌دهد، بلکه یک صفحه به عقب برمی‌گردد)
+  if(history.state && history.state.view && history.state.view !== 'home'){
+    history.back();
+  } else {
+    renderView('home');
+    history.replaceState({view:'home'}, '', '#home');
+  }
+}
+window.addEventListener('popstate', function(e){
+  const id = (e.state && e.state.view) ? e.state.view : 'home';
+  renderView(id);
+});
+// حالت اولیه‌ی تاریخچه: صفحه خانه
+if(!history.state){
+  history.replaceState({view:'home'}, '', '#home');
+}
+
+/* ---------- shared data ---------- */
+const DENSITY = {
+  'بتن آرمه':2500,'بتن ساده':2400,'فولاد':7850,'آب':1000,'ماسه (خشک)':1600,
+  'شن':1650,'سیمان (پودر)':1440,'آجر':1800,'ملات ماسه‌سیمان':2000,'آسفالت':2300,
+  'چوب (میانگین)':600,'آلومینیوم':2700,'شیشه':2500
+};
+const REBAR_D = [6,8,10,12,14,16,18,20,22,25,28,32];
+function rebarUnitWeight(d){ return (d*d)/162; } // kg/m
+const IPE = {
+  'IPE80':6.0,'IPE100':8.1,'IPE120':10.4,'IPE140':12.9,'IPE160':15.8,'IPE180':18.8,
+  'IPE200':22.4,'IPE220':26.2,'IPE240':30.7,'IPE270':36.1,'IPE300':42.2,
+  'IPE330':49.1,'IPE360':57.1,'IPE400':66.3,'IPE450':77.6,'IPE500':90.7
+};
+const COVER = {'فونداسیون':'5 - 7.5','ستون':'4','تیر':'2.5 - 3','دال':'2 - 2.5'};
+
+const fmt = n => n.toLocaleString('en-US',{maximumFractionDigits:2});
+
+/* ---------- 1) mix design ---------- */
+function calcMix(){
+  const vol = parseFloat(mixVolume.value)||0;
+  const c = parseFloat(mixC.value)||0, s = parseFloat(mixS.value)||0, g = parseFloat(mixG.value)||0;
+  const wc = parseFloat(mixWC.value)||0.5;
+  const sum = c+s+g;
+  if(sum<=0||vol<=0){ return; }
+  const dryVol = vol*1.54; // wet -> dry conversion factor
+  const cementVol = dryVol*(c/sum), sandVol = dryVol*(s/sum), gravelVol = dryVol*(g/sum);
+  const cementKg = cementVol*DENSITY['سیمان (پودر)'];
+  const sandKg = sandVol*DENSITY['ماسه (خشک)'];
+  const gravelKg = gravelVol*DENSITY['شن'];
+  const waterKg = cementKg*wc;
+  const bags = cementKg/50;
+  document.getElementById('mixResult').hidden=false;
+  document.getElementById('mixResult').innerHTML = `
+    <div class="result-row"><span>سیمان</span><b>${fmt(cementKg)} kg (${fmt(bags)} کیسه)</b></div>
+    <div class="result-row"><span>ماسه</span><b>${fmt(sandKg)} kg</b></div>
+    <div class="result-row"><span>شن</span><b>${fmt(gravelKg)} kg</b></div>
+    <div class="result-row"><span>آب</span><b>${fmt(waterKg)} kg (لیتر)</b></div>
+    <div class="result-row"><span>حجم خشک مصالح</span><b>${fmt(dryVol)} m³</b></div>`;
+}
+
+/* ---------- 2) steel weight ---------- */
+function setSteelMode(m){
+  document.querySelectorAll('#view-steel .tab').forEach(t=>t.classList.toggle('active', t.dataset.mode===m));
+  ['rebar','plate','ipe'].forEach(k=>document.getElementById('steel-'+k).hidden = k!==m);
+  document.getElementById('steelResult').hidden = true;
+}
+function calcRebarSteel(){
+  const d = parseFloat(rebarDia.value), len=parseFloat(rebarLen.value)||0, cnt=parseFloat(rebarCount.value)||0;
+  const uw = rebarUnitWeight(d);
+  const total = uw*len*cnt;
+  document.getElementById('steelResult').hidden=false;
+  document.getElementById('steelResult').innerHTML = `
+    <div class="result-row"><span>وزن واحد طول</span><b>${fmt(uw)} kg/m</b></div>
+    <div class="result-row"><span>وزن کل</span><b>${fmt(total)} kg</b></div>`;
+}
+function calcPlate(){
+  const L=parseFloat(plateL.value)||0, W=parseFloat(plateW.value)||0, T=(parseFloat(plateT.value)||0)/1000;
+  const weight = L*W*T*DENSITY['فولاد'];
+  document.getElementById('steelResult').hidden=false;
+  document.getElementById('steelResult').innerHTML = `
+    <div class="result-row"><span>حجم ورق</span><b>${fmt(L*W*T)} m³</b></div>
+    <div class="result-row"><span>وزن ورق</span><b>${fmt(weight)} kg</b></div>`;
+}
+function calcIPE(){
+  const p = ipeProfile.value, len=parseFloat(ipeLen.value)||0, cnt=parseFloat(ipeCount.value)||0;
+  const uw = IPE[p];
+  const total = uw*len*cnt;
+  document.getElementById('steelResult').hidden=false;
+  document.getElementById('steelResult').innerHTML = `
+    <div class="result-row"><span>وزن واحد طول (${p})</span><b>${fmt(uw)} kg/m</b></div>
+    <div class="result-row"><span>وزن کل</span><b>${fmt(total)} kg</b></div>`;
+}
+(function fillIPE(){
+  const sel = document.getElementById('ipeProfile');
+  Object.keys(IPE).forEach(p=>{
+    const o = document.createElement('option'); o.value=p; o.textContent=p; sel.appendChild(o);
+  });
+})();
+
+/* ---------- 3) rebar in element ---------- */
+function calcRebarElement(){
+  const L=parseFloat(rbL.value)||0, W=parseFloat(rbW.value)||0;
+  const cover=(parseFloat(rbCover.value)||0)/100;
+  const d=parseFloat(rbDia.value);
+  const space=(parseFloat(rbSpace.value)||20)/100;
+  const both = rbBoth.value==='1';
+  const uw = rebarUnitWeight(d);
+
+  const nDirA = Math.floor((W-2*cover)/space)+1;
+  const lenDirA = L-2*cover;
+  let totalLen = nDirA*lenDirA;
+  let barsInfo = `<div class="result-row"><span>تعداد میلگرد (راستای اصلی)</span><b>${nDirA} عدد</b></div>
+    <div class="result-row"><span>طول هر شاخه</span><b>${fmt(lenDirA)} m</b></div>`;
+
+  if(both){
+    const nDirB = Math.floor((L-2*cover)/space)+1;
+    const lenDirB = W-2*cover;
+    totalLen += nDirB*lenDirB;
+    barsInfo += `<div class="result-row"><span>تعداد میلگرد (راستای عمود)</span><b>${nDirB} عدد</b></div>
+      <div class="result-row"><span>طول هر شاخه</span><b>${fmt(lenDirB)} m</b></div>`;
+  }
+  const totalWeight = totalLen*uw;
+  document.getElementById('rbResult').hidden=false;
+  document.getElementById('rbResult').innerHTML = barsInfo + `
+    <div class="result-row"><span>مجموع طول میلگرد</span><b>${fmt(totalLen)} m</b></div>
+    <div class="result-row"><span>وزن کل</span><b>${fmt(totalWeight)} kg</b></div>`;
+}
+
+/* ---------- 4) volume ---------- */
+function setVolMode(m){
+  document.querySelectorAll('#view-volume .tab').forEach(t=>t.classList.toggle('active', t.dataset.mode===m));
+  ['slab','beam','column','footing'].forEach(k=>document.getElementById('vol-'+k).hidden = k!==m);
+  document.getElementById('volResult').hidden = true;
+  window._volMode = m;
+}
+window._volMode = 'slab';
+function calcVolume(){
+  const m = window._volMode;
+  let vol=0, note='';
+  if(m==='slab'){
+    const L=parseFloat(slabL.value)||0, W=parseFloat(slabW.value)||0, T=(parseFloat(slabT.value)||0)/100;
+    vol = L*W*T; note = 'دال';
+  } else if(m==='beam'){
+    const B=(parseFloat(beamB.value)||0)/100, H=(parseFloat(beamH.value)||0)/100, L=parseFloat(beamL.value)||0;
+    vol = B*H*L; note='تیر';
+  } else if(m==='column'){
+    const B=(parseFloat(colB.value)||0)/100, H=(parseFloat(colH.value)||0)/100, L=parseFloat(colL.value)||0;
+    vol = B*H*L; note='ستون';
+  } else {
+    const L=parseFloat(ftL.value)||0, W=parseFloat(ftW.value)||0, H=(parseFloat(ftH.value)||0)/100;
+    vol = L*W*H; note='فونداسیون';
+  }
+  const weight = vol*DENSITY['بتن آرمه'];
+  document.getElementById('volResult').hidden=false;
+  document.getElementById('volResult').innerHTML = `
+    <div class="result-row"><span>حجم بتن (${note})</span><b>${fmt(vol)} m³</b></div>
+    <div class="result-row"><span>وزن تقریبی بتن</span><b>${fmt(weight)} kg</b></div>`;
+}
+
+/* ---------- 5) unit converter ---------- */
+const UNITS = {
+  length:{ base:'m', units:{ 'میلی‌متر (mm)':0.001,'سانتی‌متر (cm)':0.01,'متر (m)':1,'کیلومتر (km)':1000,'اینچ (in)':0.0254,'فوت (ft)':0.3048 } },
+  area:{ base:'m2', units:{ 'سانتی‌متر مربع (cm²)':0.0001,'متر مربع (m²)':1,'فوت مربع (ft²)':0.092903,'هکتار (ha)':10000 } },
+  volume:{ base:'m3', units:{ 'لیتر (L)':0.001,'متر مکعب (m³)':1,'فوت مکعب (ft³)':0.0283168 } },
+  force:{ base:'N', units:{ 'نیوتن (N)':1,'کیلونیوتن (kN)':1000,'کیلوگرم نیرو (kgf)':9.80665,'تن نیرو (tf)':9806.65,'پوند نیرو (lbf)':4.44822 } },
+  stress:{ base:'Pa', units:{ 'پاسکال (Pa)':1,'کیلوپاسکال (kPa)':1000,'مگاپاسکال (MPa)':1e6,'کیلوگرم بر سانتی‌متر مربع (kg/cm²)':98066.5,'بار (bar)':100000,'psi':6894.76 } }
+};
+function fillUnits(){
+  const cat = UNITS[convCategory.value];
+  [convFrom, convTo].forEach(sel=>{
+    sel.innerHTML='';
+    Object.keys(cat.units).forEach(u=>{
+      const o=document.createElement('option'); o.value=u; o.textContent=u; sel.appendChild(o);
+    });
+  });
+  convTo.selectedIndex = Math.min(1, convTo.options.length-1);
+  convResult.hidden=true;
+}
+function calcConvert(){
+  const cat = UNITS[convCategory.value];
+  const v = parseFloat(convValue.value)||0;
+  const base = v*cat.units[convFrom.value];
+  const out = base/cat.units[convTo.value];
+  document.getElementById('convResult').hidden=false;
+  document.getElementById('convResult').innerHTML = `
+    <div class="result-row"><span>${convFrom.value}</span><b>${fmt(v)}</b></div>
+    <div class="result-row"><span>${convTo.value}</span><b>${fmt(out)}</b></div>`;
+}
+fillUnits();
+
+/* ---------- 7) structural loading ---------- */
+function calcLoad(){
+  const dead=parseFloat(loadDead.value)||0, live=parseFloat(loadLive.value)||0;
+  const width=parseFloat(loadWidth.value)||0;
+  const fd=parseFloat(loadFD.value)||1.2, fl=parseFloat(loadFL.value)||1.6;
+  const service = dead+live;
+  const ultimate = dead*fd + live*fl;
+  document.getElementById('loadResult').hidden=false;
+  document.getElementById('loadResult').innerHTML = `
+    <div class="result-row"><span>بار سرویس (مجموع)</span><b>${fmt(service)} kg/m²</b></div>
+    <div class="result-row"><span>بار نهایی (طراحی)</span><b>${fmt(ultimate)} kg/m²</b></div>
+    <div class="result-row"><span>بار خطی سرویس روی تیر</span><b>${fmt(service*width)} kg/m</b></div>
+    <div class="result-row"><span>بار خطی نهایی روی تیر</span><b>${fmt(ultimate*width)} kg/m</b></div>`;
+}
+
+/* ---------- 8) staircase ---------- */
+function calcStairs(){
+  const H=parseFloat(stH.value)||0;
+  const riserGuess = parseFloat(stRiser.value)||17.5;
+  let n = Math.round(H/riserGuess);
+  if(n<1) n=1;
+  const actualRiser = H/n;
+  const going = 63 - 2*actualRiser; // فرمول بلوندل: 2R + G = 63
+  const treads = Math.max(n-1,0);
+  const totalRun = (going*treads)/100;
+  const blondel = 2*actualRiser + going;
+  const status = (blondel>=60 && blondel<=65) ? 'مناسب و مطابق فرمول بلوندل' : 'خارج از محدوده راحتی؛ ارتفاع پله پیشنهادی را تغییر دهید';
+  document.getElementById('stResult').hidden=false;
+  document.getElementById('stResult').innerHTML = `
+    <div class="result-row"><span>تعداد پله (رایزر)</span><b>${n} پله</b></div>
+    <div class="result-row"><span>ارتفاع واقعی هر پله</span><b>${fmt(actualRiser)} cm</b></div>
+    <div class="result-row"><span>عرض کف‌پله پیشنهادی</span><b>${fmt(going)} cm</b></div>
+    <div class="result-row"><span>تعداد کف‌پله</span><b>${treads} عدد</b></div>
+    <div class="result-row"><span>طول افقی کل پله</span><b>${fmt(totalRun)} m</b></div>
+    <div class="result-row"><span>بررسی راحتی</span><b>${status}</b></div>`;
+}
+
+/* ---------- 9) column rebar check ---------- */
+window._ccMode = 'count';
+function setCCMode(m){
+  document.querySelectorAll('#view-colcheck .tab').forEach(t=>t.classList.toggle('active', t.dataset.mode===m));
+  ['count','area'].forEach(k=>document.getElementById('cc-'+k).hidden = k!==m);
+  document.getElementById('ccResult').hidden = true;
+  window._ccMode = m;
+}
+function calcColCheck(){
+  const b=parseFloat(ccB.value)||0, h=parseFloat(ccH.value)||0;
+  let As=0, barsNote='';
+  if(window._ccMode === 'count'){
+    const d = parseFloat(ccDia.value)||0;
+    const cnt = parseFloat(ccCount.value)||0;
+    const barArea = (Math.PI*d*d/4)/100; // mm² -> cm²
+    As = barArea*cnt;
+    barsNote = `<div class="result-row"><span>مساحت هر شاخه (Ø${d})</span><b>${fmt(barArea)} cm²</b></div>
+      <div class="result-row"><span>تعداد میلگرد</span><b>${fmt(cnt)} عدد</b></div>`;
+  } else {
+    As = parseFloat(ccAs.value)||0;
+  }
+  const Ag = b*h;
+  const ratio = Ag>0 ? (As/Ag)*100 : 0;
+  let status;
+  if(Ag<=0) status='مقطع نامعتبر است';
+  else if(ratio<1) status='کمتر از حداقل متداول (۱٪) — افزایش آرماتور لازم است';
+  else if(ratio>4) status='بیشتر از حداکثر متداول (۴٪) — بازبینی مقطع یا آرایش آرماتور لازم است';
+  else status='در محدوده متداول آیین‌نامه‌ای (۱٪ تا ۴٪)';
+  document.getElementById('ccResult').hidden=false;
+  document.getElementById('ccResult').innerHTML = barsNote + `
+    <div class="result-row"><span>مساحت مقطع ستون (Ag)</span><b>${fmt(Ag)} cm²</b></div>
+    <div class="result-row"><span>مساحت کل آرماتور (As)</span><b>${fmt(As)} cm²</b></div>
+    <div class="result-row"><span>درصد آرماتور طولی (ρ)</span><b>${fmt(ratio)} %</b></div>
+    <div class="result-row"><span>وضعیت</span><b>${status}</b></div>`;
+}
+
+/* ---------- 11) slope / grade ---------- */
+function calcSlope(){
+  const rise = parseFloat(slRise.value)||0;
+  const run = parseFloat(slRun.value)||0;
+  const percent = run>0 ? (rise/run)*100 : 0;
+  const angle = run>0 ? Math.atan(rise/run)*180/Math.PI : 0;
+  const ratioN = rise>0 ? run/rise : 0;
+  let note;
+  if(percent<=5) note='شیب ملایم؛ مناسب رمپ پیاده و پارکینگ';
+  else if(percent<=8) note='حداکثر شیب متداول رمپ پارکینگ خودرو';
+  else if(percent<=12) note='شیب تند؛ برای رمپ‌های کوتاه با احتیاط';
+  else note='شیب بسیار تند؛ نیازمند بررسی ویژه پایداری/ایمنی';
+  document.getElementById('slResult').hidden=false;
+  document.getElementById('slResult').innerHTML = `
+    <div class="result-row"><span>درصد شیب</span><b>${fmt(percent)} %</b></div>
+    <div class="result-row"><span>زاویه شیب</span><b>${fmt(angle)} °</b></div>
+    <div class="result-row"><span>نسبت شیب</span><b>1 : ${fmt(ratioN)}</b></div>
+    <div class="result-row"><span>ارزیابی</span><b>${note}</b></div>`;
+}
+
+/* ---------- 12) earthwork cut & fill ---------- */
+function calcEarthwork(){
+  const area = parseFloat(ewArea.value)||0;
+  const cutD = parseFloat(ewCut.value)||0;
+  const fillD = parseFloat(ewFill.value)||0;
+  const swell = (parseFloat(ewSwell.value)||0)/100;
+  const shrink = (parseFloat(ewShrink.value)||0)/100;
+  const cutBank = area*cutD;
+  const cutLoose = cutBank*(1+swell);
+  const fillCompacted = area*fillD;
+  const borrowLoose = fillCompacted*(1+shrink);
+  const balance = cutBank - fillCompacted;
+  const balNote = balance>0 ? `مازاد خاک (نیاز به حمل به خارج): ${fmt(balance)} m³`
+    : balance<0 ? `کمبود خاک (نیاز به قرضه از خارج): ${fmt(Math.abs(balance))} m³`
+    : 'حجم برش و پر برابر است';
+  document.getElementById('ewResult').hidden=false;
+  document.getElementById('ewResult').innerHTML = `
+    <div class="result-row"><span>حجم خاکبرداری (حالت طبیعی/Bank)</span><b>${fmt(cutBank)} m³</b></div>
+    <div class="result-row"><span>حجم خاکبرداری برای حمل (با تورم)</span><b>${fmt(cutLoose)} m³</b></div>
+    <div class="result-row"><span>حجم خاکریزی متراکم مورد نیاز</span><b>${fmt(fillCompacted)} m³</b></div>
+    <div class="result-row"><span>حجم خاک قرضه شل مورد نیاز</span><b>${fmt(borrowLoose)} m³</b></div>
+    <div class="result-row"><span>موازنه خاک</span><b>${balNote}</b></div>`;
+}
+
+/* ---------- 13) bank interest / investment ---------- */
+function formatThousands(el){
+  const caretFromEnd = el.value.length - el.selectionEnd;
+  let digits = el.value.replace(/[^0-9]/g,'');
+  digits = digits.replace(/^0+(?=\d)/,'');
+  el.value = digits === '' ? '' : Number(digits).toLocaleString('en-US');
+  const pos = Math.max(0, el.value.length - caretFromEnd);
+  el.setSelectionRange(pos, pos);
+}
+window._bankMode = 'simple';
+function setBankMode(m){
+  document.querySelectorAll('#view-bank .tab').forEach(t=>t.classList.toggle('active', t.dataset.mode===m));
+  ['simple','compound'].forEach(k=>document.getElementById('bank-'+k).hidden = k!==m);
+  window._bankMode = m;
+}
+function calcBankSimple(){
+  const P = parseFloat((bkPrincipal.value||'0').replace(/,/g,''))||0;
+  const rate = parseFloat(bkRate.value)||0;
+  const dur = parseFloat(bkDuration.value)||0;
+  const months = bkDurUnit.value==='year' ? dur*12 : dur;
+  const dailyProfit = P*(rate/100)/365;
+  const monthlyProfit = P*(rate/100)/12;
+  const totalProfit = monthlyProfit*months;
+  const finalAmount = P+totalProfit;
+  const monthlyRateEq = rate/12;
+  document.getElementById('bkSimpleResult').hidden=false;
+  document.getElementById('bkSimpleResult').innerHTML = `
+    <div class="result-row"><span>سود روزانه</span><b>${fmt(dailyProfit)} تومان</b></div>
+    <div class="result-row"><span>سود ماهانه</span><b>${fmt(monthlyProfit)} تومان</b></div>
+    <div class="result-row"><span>سود کل دوره (${fmt(months)} ماه)</span><b>${fmt(totalProfit)} تومان</b></div>
+    <div class="result-row"><span>مبلغ نهایی (اصل + سود دوره)</span><b>${fmt(finalAmount)} تومان</b></div>
+    <div class="result-row"><span>نرخ سود ماهانه معادل</span><b>${fmt(monthlyRateEq)} %</b></div>`;
+}
+function calcBankCompound(){
+  const P = parseFloat((cpPrincipal.value||'0').replace(/,/g,''))||0;
+  const rate = parseFloat(cpRate.value)||0;
+  const freq = parseFloat(cpFreq.value)||12;
+  const years = parseFloat(cpYears.value)||0;
+  const monthlyDeposit = parseFloat((cpMonthly.value||'0').replace(/,/g,''))||0;
+
+  const totalMonths = Math.max(0, Math.round(years*12));
+  const monthlyEffRate = Math.pow(1+(rate/100)/freq, freq/12) - 1;
+  const apy = (Math.pow(1+(rate/100)/freq, freq) - 1)*100;
+
+  let balance = P;
+  const yearlyBalances = [];
+  for(let m=1; m<=totalMonths; m++){
+    balance = balance*(1+monthlyEffRate) + monthlyDeposit;
+    if(m % 12 === 0) yearlyBalances.push({year:m/12, balance});
+  }
+  if(totalMonths % 12 !== 0 && totalMonths>0){
+    yearlyBalances.push({year: totalMonths/12, balance});
+  }
+
+  const totalDeposited = P + monthlyDeposit*totalMonths;
+  const totalProfit = balance - totalDeposited;
+
+  document.getElementById('cpResult').hidden=false;
+  document.getElementById('cpResult').innerHTML = `
+    <div class="result-row"><span>مبلغ نهایی</span><b>${fmt(balance)} تومان</b></div>
+    <div class="result-row"><span>مجموع مبلغ واریزی (اصل + واریز ماهانه)</span><b>${fmt(totalDeposited)} تومان</b></div>
+    <div class="result-row"><span>سود کل به‌دست‌آمده</span><b>${fmt(totalProfit)} تومان</b></div>
+    <div class="result-row"><span>نرخ موثر سالانه (APY)</span><b>${fmt(apy)} %</b></div>
+    <div class="result-row"><span>نرخ موثر ماهانه</span><b>${fmt(monthlyEffRate*100)} %</b></div>`;
+
+  const tbl = document.getElementById('cpTable');
+  tbl.innerHTML = '<div class="ref-row"><span><b>سال</b></span><span><b>موجودی تجمعی (تومان)</b></span></div>' +
+    yearlyBalances.slice(0,30).map(y=>`<div class="ref-row"><span>سال ${fmt(y.year)}</span><span>${fmt(y.balance)}</span></div>`).join('');
+}
+
+/* ---------- 14) parking standards ---------- */
+function calcParking(){
+  const useFactor = parseFloat(pkUse.value)||1;
+  const area = parseFloat(pkArea.value)||0;
+  const ratio = parseFloat(pkRatio.value)||1;
+  const units = useFactor>1 ? area/useFactor : area;
+  const required = Math.ceil(units*ratio);
+  document.getElementById('pkResult').hidden=false;
+  document.getElementById('pkResult').innerHTML = `
+    <div class="result-row"><span>تعداد واحد/سرانه محاسبه‌شده</span><b>${fmt(units)}</b></div>
+    <div class="result-row"><span>تعداد پارکینگ برآوردی مورد نیاز</span><b>${required} پارکینگ</b></div>`;
+}
+(function buildParkingRef(){
+  const rows = [
+    ['عرض پارکینگ عمود بر مسیر','۲.۵ متر'],
+    ['طول پارکینگ سواری','۵.۰ متر'],
+    ['عرض راه‌رو حرکت (دوطرفه)','۵.۰ تا ۶.۰ متر'],
+    ['عرض راه‌رو حرکت (یک‌طرفه)','۳.۰ تا ۳.۵ متر'],
+    ['حداکثر شیب رمپ مستقیم','۱۶ تا ۱۸ %'],
+    ['حداکثر شیب رمپ منحنی','۱۲ تا ۱۴ %'],
+    ['طول قوس تسکین ابتدا/انتهای رمپ','~۲ متر با نصف شیب'],
+    ['حداقل ارتفاع مفید پارکینگ','۲.۲ متر (توصیه ۲.۴ برای آتش‌نشانی)'],
+    ['عرض پارکینگ ویژه معلولین','۳.۵ متر'],
+    ['حداقل شعاع گردش رمپ','~۵.۵ متر']
+  ];
+  document.getElementById('refParkingDim').innerHTML = rows.map(r=>
+    `<div class="ref-row"><span>${r[0]}</span><span>${r[1]}</span></div>`).join('');
+})();
+
+/* ---------- 15) key numbers cheat sheet ---------- */
+(function buildKeyNums(){
+  const stairs = [
+    ['حداکثر ارتفاع پله (Riser)','۱۷ تا ۱۸ سانتی‌متر'],
+    ['حداقل عرض کف‌پله (Going)','۲۵ تا ۲۸ سانتی‌متر'],
+    ['فرمول بلوندل','2R + G = ۶۰ تا ۶۵'],
+    ['حداقل عرض بازشوی پله مسکونی','۱۰۰ تا ۱۱۰ سانتی‌متر'],
+    ['حداکثر تعداد پله بین پاگردها','۱۲ تا ۱۶ پله'],
+    ['حداقل ارتفاع نرده پله و بالکن','۹۰ تا ۱۰۰ سانتی‌متر']
+  ];
+  const heights = [
+    ['مسکونی','۲.۷۰ تا ۳.۰۰'],
+    ['اداری / تجاری','۳.۲۰ تا ۳.۶۰'],
+    ['پارکینگ','۲.۲۰ تا ۲.۴۰'],
+    ['انباری / زیرزمین','۲.۲۰ تا ۲.۴۰']
+  ];
+  const liveLoads = [
+    ['مسکونی (اتاق‌ها)','۲۰۰'],
+    ['راهرو و پله مسکونی','۳۵۰ تا ۴۰۰'],
+    ['اداری','۲۰۰ تا ۲۵۰'],
+    ['تجمع عمومی (سالن/آمفی‌تئاتر)','۴۰۰ تا ۵۰۰'],
+    ['کتابخانه / انبار سبک','۴۰۰ تا ۶۰۰'],
+    ['پارکینگ سواری','۲۵۰ تا ۴۰۰'],
+    ['بام قابل دسترس','۱۵۰ تا ۲۰۰'],
+    ['بام غیرقابل دسترس','۱۰۰ تا ۱۵۰']
+  ];
+  const doors = [
+    ['حداقل عرض در ورودی واحد مسکونی','۹۰ سانتی‌متر'],
+    ['حداقل عرض در اتاق‌خواب / سرویس','۷۰ تا ۸۰ سانتی‌متر'],
+    ['حداقل عرض راهرو مسکونی','۱۲۰ سانتی‌متر'],
+    ['حداقل عرض راهرو عمومی / اداری','۱۵۰ تا ۱۸۰ سانتی‌متر'],
+    ['حداقل عرض راه خروج اضطراری','۱۱۰ تا ۱۲۰ سانتی‌متر'],
+    ['ارتفاع مفید در','۲۰۰ تا ۲۱۰ سانتی‌متر'],
+    ['ارتفاع نرده بالکن / پشت‌بام','۹۰ تا ۱۱۰ سانتی‌متر']
+  ];
+  const materials = [
+    ['رده متداول بتن سازه‌ای','C25 تا C30'],
+    ['تنش تسلیم میلگرد آجدار (A3)','۴۰۰۰ kg/cm² (400 MPa)'],
+    ['مدول الاستیسیته فولاد','۲,۰۰۰,۰۰۰ kg/cm² (~200 GPa)'],
+    ['مدول الاستیسیته بتن (تقریبی)','15000×√fc (kg/cm²)'],
+    ['وزن مخصوص بتن آرمه','۲۵۰۰ kg/m³'],
+    ['حداقل عیار سیمان بتن سازه‌ای','۳۰۰ تا ۳۵۰ kg/m³']
+  ];
+  const put=(id,rows)=>{ document.getElementById(id).innerHTML = rows.map(r=>
+    `<div class="ref-row"><span>${r[0]}</span><span>${r[1]}</span></div>`).join(''); };
+  put('refStairNums', stairs);
+  put('refHeights', heights);
+  put('refLiveLoads', liveLoads);
+  put('refDoors', doors);
+  put('refMaterials', materials);
+})();
+
+/* ---------- 6) reference tables ---------- */
+(function buildRef(){
+  const dEl = document.getElementById('refDensity');
+  Object.entries(DENSITY).forEach(([k,v])=>{
+    dEl.innerHTML += `<div class="ref-row"><span>${k}</span><span>${fmt(v)}</span></div>`;
+  });
+  const rEl = document.getElementById('refRebar');
+  REBAR_D.forEach(d=>{
+    rEl.innerHTML += `<div class="ref-row"><span>Ø${d}</span><span>${fmt(rebarUnitWeight(d))}</span></div>`;
+  });
+  const iEl = document.getElementById('refIpe');
+  Object.entries(IPE).forEach(([k,v])=>{
+    iEl.innerHTML += `<div class="ref-row"><span>${k}</span><span>${fmt(v)}</span></div>`;
+  });
+  const cEl = document.getElementById('refCover');
+  Object.entries(COVER).forEach(([k,v])=>{
+    cEl.innerHTML += `<div class="ref-row"><span>${k}</span><span>${v}</span></div>`;
+  });
+})();
+
+/* ---------- 16) ضریب زلزله استاتیکی - استاندارد ۲۸۰۰ ویرایش ۵ ---------- */
+const SEIS_RU = {"انتخاب کنید...": {}, "الف) سیستم دیوارهای باربر": {"1- دیوار برشی بتن آرمه همبند شکل‌پذیر": 6.5, "2- دیوار برشی بتن آرمه ویژه": 5, "3- دیوار برشی بتن آرمه معمولی": 4, "4- دیوار برشی بنایی مسلح": 4, "5- دیوار قاب سبک فولادی سردنورد و مهارهای تسمه‌ای": 4, "6- دیوار قاب سبک فولادی سردنورد و صفحات پوشش فولادی": 5.5, "7- دیوار بتن پاششی سه بعدی": 3}, "ب) سیستم قاب ساختمانی": {"1- دیوار برشی بتن آرمه همبند شکل‌پذیر": 6.5, "2- دیوار برشی بتن آرمه ویژه": 6, "3- دیوار برشی بتن آرمه معمولی": 4.5, "4- دیوار برشی بنایی مسلح": 4, "5- قاب مهاربندی‌شده همگرای فولادی ویژه": 6, "6- قاب مهاربندی‌شده همگرای فولادی معمولی": 3.5, "7- قاب مهاربندی‌شده واگرای فولادی با تیر پیوند برشی": 6.5, "8- قاب مهاربندی واگرای فولادی با تیر پیوند خمشی/برشی": 6, "9- قاب مهاربندی‌شده کمانش‌تاب": 6.5, "10- دیوار برشی فولادی ویژه": 6, "11- قاب مهاربندی‌شده همگرای مختلط ویژه": 5, "12- قاب مهاربندی‌شده واگرای مختلط": 6.5, "13- دیوار برشی مختلط ویژه": 5.5}, "پ) سیستم قاب خمشی": {"1- قاب خمشی بتن آرمه ویژه": 6.5, "2- قاب خمشی بتن آرمه متوسط": 4.5, "3- قاب خمشی بتن آرمه معمولی": 3, "4- قاب خمشی فولادی ویژه": 6.5, "5- قاب خمشی فولادی متوسط": 4.5, "6- قاب خمشی فولادی معمولی": 3.5, "7- قاب خمشی خرپایی فولادی ویژه": 6, "8- قاب خمشی مختلط ویژه": 6.5}, "ت) سیستم دوگانه": {"1- قاب خمشی ویژه + دیوار برشی بتن آرمه همبند شکل‌پذیر": 7.5, "2- قاب خمشی ویژه + دیوار برشی بتن آرمه ویژه": 7, "3- قاب خمشی فولادی ویژه + قاب مهاربند همگرای فولادی ویژه": 7, "4- قاب خمشی فولادی ویژه + قاب مهاربند واگرای فولادی (برشی)": 7.5, "5- قاب خمشی فولادی ویژه + قاب مهاربند واگرای فولادی (خمشی)": 7, "6- قاب خمشی فولادی ویژه + قاب مهاربندی‌شده کمانش‌تاب": 7, "7- قاب خمشی فولادی ویژه + دیوار برشی فولادی ویژه": 7, "8- قاب خمشی بتن آرمه متوسط + دیوار برشی بتن آرمه ویژه": 6, "9- قاب خمشی فولادی متوسط + قاب مهاربند همگرای فولادی ویژه": 6, "10- قاب خمشی ویژه + قاب مهاربند همگرای مختلط ویژه": 6, "11- قاب خمشی ویژه + قاب مهاربندی‌شده واگرای مختلط": 7, "12- قاب خمشی ویژه + دیوار برشی مختلط ویژه": 7, "13- قاب خمشی متوسط + قاب مهاربندی‌شده همگرای مختلط ویژه": 5.0}, "ث) سیستم ستون کنسولی": {"1- سازه فولادی یا بتن آرمه ویژه": 2}};
+const SEIS_TABLES = {"fs": {"keys": [0.5, 0.75, 1.0, 1.25, 1.5], "rows": {"1": [1.0, 1.0, 1.0, 1.0, 1.0], "2": [1.2, 1.2, 1.1, 1.0, 1.0], "3": [1.3, 1.2, 1.1, 1.0, 1.0], "4": [1.6, 1.3, 1.3, 1.1, 1.1], "5": [1.6, 1.4, 1.4, 1.2, 1.2]}}, "f1": {"keys": [0.2, 0.3, 0.4, 0.5, 0.6], "rows": {"1": [1.0, 1.0, 1.0, 1.0, 1.0], "2": [1.5, 1.3, 1.3, 1.3, 1.3], "3": [2.2, 2.1, 2.1, 2.1, 2.1], "4": [3.3, 3.3, 3.2, 2.8, 2.8], "5": [2.2, 2.1, 2.1, 2.1, 2.1]}}, "fpga": {"keys": [0.2, 0.3, 0.4, 0.5, 0.6], "rows": {"1": [1.0, 1.0, 1.0, 1.0, 1.0], "2": [1.2, 1.2, 1.1, 1.0, 1.0], "3": [1.4, 1.3, 1.1, 1.0, 1.0], "4": [1.6, 1.6, 1.4, 1.2, 1.2], "5": [1.6, 1.6, 1.4, 1.4, 1.2]}}};
+
+/* SEIS-ENGINE-START */
+const SEIS_IE = [1.0, 0.8, 1.2, 1.4];
+const SEIS_TL = 6.0; // پریود انتقال ناحیه چهارم طیف
+const seisM  = s => '<bdi dir="ltr">' + s + '</bdi>';
+const seisF3 = x => x.toFixed(3);
+const seisF4 = x => x.toFixed(4);
+
+function seisInterp(x, xs, ys){
+  if (x <= xs[0]) return ys[0];
+  if (x >= xs[xs.length-1]) return ys[ys.length-1];
+  for (let i = 0; i < xs.length - 1; i++){
+    if (xs[i] <= x && x <= xs[i+1]){
+      const x0 = xs[i], x1 = xs[i+1], y0 = ys[i], y1 = ys[i+1];
+      return y0 + (x - x0) * (y1 - y0) / (x1 - x0);
+    }
+  }
+  return ys[ys.length-1];
+}
+// soilNo: 1..5 = نوع I..V  |  6 = نوع VI (فقط ورود دستی)
+function seisFactor(kind, soilNo, x, manualEnabled, manualText, label){
+  if (manualEnabled && String(manualText).trim() !== ''){
+    const v = Number(manualText);
+    if (!isFinite(v)) throw new Error('مقدار دستی ' + label + ' عددی معتبر نیست.');
+    return v;
+  }
+  if (soilNo === 6) throw new Error('برای خاک نوع VI مقدار ' + label + ' باید دستی وارد شود.');
+  const t = SEIS_TABLES[kind];
+  return seisInterp(x, t.keys, t.rows[soilNo]);
+}
+// شتاب طیفی Sa بر حسب پریود (طیف طرح استاندارد) + متن فرمول
+function seisSpectrum(t, sds, sd1, t0, ts){
+  if (t < t0)   return { v: sds * (0.4 + 0.6 * (t / t0)), f: `${seisF3(sds)} × (0.4 + 0.6 × (${seisF3(t)} / ${seisF3(t0)}))` };
+  if (t <= ts)  return { v: sds, f: `Sds = ${seisF3(sds)}` };
+  if (t <= SEIS_TL) return { v: sd1 / t, f: `${seisF3(sd1)} / ${seisF3(t)}` };
+  return { v: (sd1 * SEIS_TL) / (t * t), f: `(${seisF3(sd1)} × ${SEIS_TL}) / ${seisF3(t)}²` };
+}
+function seisKFactor(t, name){
+  if (t <= 0.5) return { v: 1.0, f: `${name} ≤ 0.5 ⇒ K = 1` };
+  if (t >= 2.5) return { v: 2.0, f: `${name} ≥ 2.5 ⇒ K = 2` };
+  const v = 0.5 * t + 0.75;
+  return { v, f: `0.5 < ${name} < 2.5 ⇒ K = 0.5 × ${seisF3(t)} + 0.75 = ${seisF3(v)}` };
+}
+
+/*
+  p = { ieIdx, ss, s1, soilIdx(0..5), vsMeasured, manualEnabled, manFs, manF1, manFpga,
+        h, sysIdx, ru, t2On, t2Text, t14, tDrift }
+*/
+function seisCompute(p){
+  const ie = SEIS_IE[p.ieIdx];
+  const { ss, s1, h, ru } = p;
+  if (![ss, s1, h, ru].every(isFinite)) throw new Error('لطفاً مقادیر Ss، S1، ارتفاع H و ضریب Ru را به‌صورت عددی وارد کنید.');
+  if (ss < 0 || s1 < 0) throw new Error('مقادیر Ss و S1 نمی‌توانند منفی باشند.');
+  if (h <= 0)  throw new Error('ارتفاع سازه H باید بزرگتر از صفر باشد.');
+  if (ru <= 0) throw new Error('ضریب Ru باید بزرگتر از صفر باشد.');
+
+  const soilNo = p.soilIdx + 1;
+  const notes = [];
+
+  // ----- ضرایب ساختگاه -----
+  let fs   = seisFactor('fs',   soilNo, ss,       p.manualEnabled, p.manFs,   'Fs');
+  let f1   = seisFactor('f1',   soilNo, s1,       p.manualEnabled, p.manF1,   'F1');
+  const pga = 0.4 * ss;
+  let fpga = seisFactor('fpga', soilNo, pga,      p.manualEnabled, p.manFpga, 'F_PGA');
+  let vsApplied = false;
+  if (p.soilIdx === 0 && p.vsMeasured){ fs *= 0.9; f1 *= 0.9; fpga *= 0.9; vsApplied = true; }
+
+  const sds = (2.0 / 3.0) * fs * ss;
+  const sd1 = (2.0 / 3.0) * f1 * s1;
+
+  // ----- گروه طراحی لرزه‌ای -----
+  const ieSd1 = ie * sd1, ieSds = ie * sds, ieS1 = ie * s1;
+  let sdc, sdcHtml;
+  if (ieSd1 <= 0.4 && ieSds <= 0.75){
+    sdc = ie === 1.4 ? 'SDC-3' : (ie === 1.2 ? 'SDC-2' : 'SDC-1');
+    sdcHtml = `${seisM(`Ie·Sd1 = ${seisF3(ieSd1)} ≤ 0.4`)} و ${seisM(`Ie·Sds = ${seisF3(ieSds)} ≤ 0.75`)}<br>ضریب اهمیت: ${seisM('Ie = ' + ie.toFixed(1))}`;
+  } else if ((ieSd1 > 0.4 || ieSds > 0.75) && ieS1 <= 0.6){
+    sdc = ie === 1.4 ? 'SDC-3' : (ie === 1.2 ? 'SDC-2' : 'SDC-2');
+    sdcHtml = `${seisM(`Ie·Sd1 = ${seisF3(ieSd1)} > 0.4`)} یا ${seisM(`Ie·Sds = ${seisF3(ieSds)} > 0.75`)}<br>و ${seisM(`Ie·S1 = ${seisF3(ieS1)} ≤ 0.6`)}<br>ضریب اهمیت: ${seisM('Ie = ' + ie.toFixed(1))}`;
+  } else if (ieS1 > 0.6){
+    sdc = 'SDC-3';
+    sdcHtml = `${seisM(`Ie·S1 = ${seisF3(ieS1)} > 0.6`)}<br>ضریب اهمیت: ${seisM('Ie = ' + ie.toFixed(1))}`;
+  } else { sdc = 'نامشخص'; sdcHtml = '-'; }
+
+  // ----- پریود تجربی T -----
+  const SYS = [[0.072, 0.8], [0.047, 0.9], [0.073, 0.75], [0.049, 0.75], [0.049, 0.75]];
+  const [a, b] = SYS[p.sysIdx];
+  const tEmp = a * Math.pow(h, b);
+  let t = tEmp;
+  let tFormula = `${a} × ${h}^${b} = ${seisF3(tEmp)}`;
+
+  if (p.t2On){
+    const t2 = String(p.t2Text).trim() === '' ? NaN : Number(p.t2Text);
+    if (isFinite(t2)){
+      const tMax = 1.4 * tEmp;
+      t = Math.min(t2, tMax);
+      if (t < tEmp) t = tEmp;
+      tFormula = `Max(T_exp, Min(T2, 1.4·T_exp)) = Max(${seisF3(tEmp)}, Min(${seisF3(t2)}, ${seisF3(tMax)})) = ${seisF3(t)}`;
+    } else {
+      notes.push('پریود تحلیلی T2 فعال شده ولی عدد معتبری وارد نشده است؛ از پریود تجربی (T) استفاده شد.');
+    }
+  } else if (p.t14){
+    t = 1.4 * tEmp;
+    tFormula = `1.4 × T_exp = 1.4 × ${seisF3(tEmp)} = ${seisF3(t)}`;
+  }
+
+  const kk = seisKFactor(t, 'T');
+
+  // ----- طیف و Sa -----
+  const ts = sds !== 0 ? sd1 / sds : 0;
+  const t0 = 0.2 * ts;
+  const spec = seisSpectrum(t, sds, sd1, t0, ts);
+
+  // ----- C و C_min -----
+  let c = (sds * ie) / ru;
+  let cMin = 0.044 * sds * ie;
+  let cMinFormula = `0.044 × ${seisF3(sds)} × ${seisF3(ie)}`;
+  if (cMin < 0.01){ cMin = 0.01; cMinFormula = '0.01 (حداقل مطلق)'; }
+  if (s1 >= 0.6){
+    const cMinS1 = 0.5 * s1 / (ru / ie);
+    if (cMinS1 > cMin){ cMin = cMinS1; cMinFormula = `0.5 × ${seisF3(s1)} / (${seisF3(ru)} / ${seisF3(ie)})`; }
+  }
+  let cClamped = false;
+  if (c < cMin){ c = cMin; cClamped = true; }
+  const cFormula = `(${seisF3(sds)} × ${seisF3(ie)}) / ${seisF3(ru)} = ${seisF4((sds * ie) / ru)}`;
+
+  // ----- دریفت (اختیاری) -----
+  let drift = null;
+  const td = p.tDrift;
+  if (isFinite(td) && td > 0){
+    const sp = seisSpectrum(td, sds, sd1, t0, ts);
+    const kd = seisKFactor(td, 'T_drift');
+    let cd, cdF, cdClamped = false;
+    if (ie === 1.4){ cd = c; cdF = 'برابر با C به دلیل Ie = 1.4'; }
+    else { cd = (sp.v * ie) / ru; cdF = `(${seisF3(sp.v)} × ${seisF3(ie)}) / ${seisF3(ru)}`; }
+    if (cd < cMin){ cd = cMin; cdClamped = true; if (ie === 1.4) cdF = `C_min (${seisF3(cMin)})`; }
+    drift = { t: td, k: kd.v, kFormula: kd.f, sa: sp.v, saFormula: sp.f, c: cd, cFormula: cdF, clamped: cdClamped };
+  }
+
+  return { ie, ss, s1, pga, fs, f1, fpga, vsApplied, manualEnabled: p.manualEnabled,
+           sds, sd1, t0, ts, h, tEmp, t, tFormula, k: kk.v, kFormula: kk.f,
+           sa: spec.v, saFormula: spec.f, ru, cMin, cMinFormula, c, cClamped, cFormula,
+           sdc, sdcHtml, drift, notes };
+}
+/* SEIS-ENGINE-END */
+
+/* ---------- رابط کاربری ---------- */
+const seisEl = id => document.getElementById(id);
+
+function seisManualEnabled(){
+  const soil = parseInt(seisEl('seisSoil').value, 10);
+  const ieIdx = parseInt(seisEl('seisIe').value, 10);
+  if (soil === 5) return true;                                   // نوع VI: فقط دستی
+  const highIe = (ieIdx === 2 || ieIdx === 3);                   // اهمیت زیاد / خیلی زیاد
+  const badSoil = (soil === 2 || soil === 3 || soil === 4);      // III, IV, V
+  return highIe && badSoil && seisEl('seisManualOn').checked;
+}
+function seisSoilUI(){
+  const soil = parseInt(seisEl('seisSoil').value, 10);
+  const ieIdx = parseInt(seisEl('seisIe').value, 10);
+  const highIe = (ieIdx === 2 || ieIdx === 3);
+  const badSoil = (soil === 2 || soil === 3 || soil === 4);
+
+  // چک‌باکس ویژه‌ی نوع I
+  const vsRow = seisEl('seisVsRow');
+  vsRow.hidden = soil !== 0;
+  if (soil !== 0) seisEl('seisVs').checked = false;
+
+  const box = seisEl('seisManualBox'), note = seisEl('seisSoilNote'), tgl = seisEl('seisManualToggle');
+  if (soil === 5){
+    box.hidden = false; tgl.hidden = true; seisEl('seisManualOn').checked = false;
+    note.className = 'seis-note';
+    note.textContent = 'برای زمین نوع VI تعیین طیف ویژه الزامی است. لطفاً مقادیر Fs، F1 و F_PGA را به‌صورت دستی وارد نمایید.';
+  } else if (highIe && badSoil){
+    box.hidden = false; tgl.hidden = false;
+    note.className = 'seis-note warn';
+    note.textContent = 'توجه: تحلیل ساختگاه ویژه الزامی است! می‌توانید با مسئولیت خود از مقادیر جدول استفاده کنید یا ضرایب را دستی وارد نمایید.';
+  } else {
+    box.hidden = true; seisEl('seisManualOn').checked = false;
+  }
+  const en = seisManualEnabled();
+  ['seisManFs','seisManF1','seisManFpga'].forEach(id => { seisEl(id).disabled = !en; });
+  seisEl('seisManualFields').hidden = !en;
+}
+
+/* گروه و نوع سیستم مقاوم (Ru) */
+function seisBuildRu(){
+  const cat = seisEl('seisRuCat');
+  cat.innerHTML = '';
+  Object.keys(SEIS_RU).forEach(k => cat.add(new Option(k, k)));
+  seisRuCatChange();
+}
+function seisRuCatChange(){
+  const c = seisEl('seisRuCat').value;
+  const typ = seisEl('seisRuType');
+  typ.innerHTML = '';
+  typ.add(new Option('انتخاب کنید...', ''));
+  if (SEIS_RU[c]) Object.keys(SEIS_RU[c]).forEach(k => typ.add(new Option(k, k)));
+  seisEl('seisRu').value = '';
+}
+function seisRuTypeChange(){
+  const c = seisEl('seisRuCat').value, t = seisEl('seisRuType').value;
+  if (SEIS_RU[c] && Object.prototype.hasOwnProperty.call(SEIS_RU[c], t)) seisEl('seisRu').value = String(SEIS_RU[c][t]);
+  else if (t === '') seisEl('seisRu').value = '';
+}
+/* T2 و ۱.۴T با هم تداخل دارند */
+function seisT2Toggle(){
+  const on = seisEl('seisT2On').checked;
+  seisEl('seisT2').disabled = !on;
+  if (on) seisEl('seisT14').checked = false;
+}
+function seisT14Toggle(){
+  if (seisEl('seisT14').checked){ seisEl('seisT2On').checked = false; seisT2Toggle(); }
+}
+
+function seisNum(id){
+  const s = seisEl(id).value.trim();
+  return s === '' ? NaN : Number(s);
+}
+function seisReadInputs(){
+  const tdText = seisEl('seisTd').value.trim();
+  return {
+    ieIdx: parseInt(seisEl('seisIe').value, 10),
+    ss: seisNum('seisSs'), s1: seisNum('seisS1'),
+    soilIdx: parseInt(seisEl('seisSoil').value, 10),
+    vsMeasured: seisEl('seisVs').checked,
+    manualEnabled: seisManualEnabled(),
+    manFs: seisEl('seisManFs').value, manF1: seisEl('seisManF1').value, manFpga: seisEl('seisManFpga').value,
+    h: seisNum('seisH'), sysIdx: parseInt(seisEl('seisSys').value, 10),
+    ru: seisNum('seisRu'),
+    t2On: seisEl('seisT2On').checked, t2Text: seisEl('seisT2').value,
+    t14: seisEl('seisT14').checked,
+    tDrift: tdText === '' ? 0 : Number(tdText)   // ورودی نامعتبر = نادیده گرفته می‌شود (مثل برنامه‌ی اصلی)
+  };
+}
+
+function seisRender(r){
+  const row = (l, v, cls) => `<div class="result-row${cls ? ' ' + cls : ''}"><span>${l}</span><b><bdi dir="ltr">${v}</bdi></b></div>`;
+  const fm = (s) => `<div class="seis-f" dir="${/[\u0600-\u06FF]/.test(s) ? 'rtl' : 'ltr'}">${s}</div>`;
+  const hd = (s) => `<div class="seis-h">${s}</div>`;
+  let o = '';
+
+  o += hd('۱) پارامترهای ورودی و اهمیت');
+  o += row('ضریب اهمیت سازه (Ie)', seisF3(r.ie));
+  o += row('شتاب مبنای طرح (Ss)', seisF3(r.ss) + ' g');
+  o += row('شتاب دوره تناوب ۱ ثانیه (S1)', seisF3(r.s1) + ' g');
+  o += row('شتاب حداکثر زمین (PGA = 0.4·Ss)', seisF3(r.pga) + ' g');
+
+  o += hd('۲) ضرایب ساختگاه');
+  o += row('ضریب محل، تناوب کوتاه (Fs)', seisF3(r.fs));
+  o += row('ضریب محل، تناوب ۱ ثانیه (F1)', seisF3(r.f1));
+  o += row('ضریب محل، شتاب حداکثر (F_PGA)', seisF3(r.fpga));
+  if (r.vsApplied) o += fm('نوع I با سرعت موج برشی آزمایشی: هر سه ضریب در 0.9 ضرب شده‌اند.');
+  if (r.manualEnabled) o += fm('ضرایبی که به‌صورت دستی وارد شده‌اند به‌جای مقدار جدول اعمال شده‌اند.');
+
+  o += hd('۳) پارامترهای طیف طرح');
+  o += row('شتاب طیفی تناوب کوتاه (Sds)', seisF3(r.sds) + ' g');
+  o += fm(`Sds = (2/3) × Fs × Ss = (2/3) × ${seisF3(r.fs)} × ${seisF3(r.ss)} = ${seisF3(r.sds)}`);
+  o += row('شتاب طیفی تناوب ۱ ثانیه (Sd1)', seisF3(r.sd1) + ' g');
+  o += fm(`Sd1 = (2/3) × F1 × S1 = (2/3) × ${seisF3(r.f1)} × ${seisF3(r.s1)} = ${seisF3(r.sd1)}`);
+  o += row('T0 = 0.2·Ts', seisF3(r.t0) + ' s');
+  o += row('Ts = Sd1 / Sds', seisF3(r.ts) + ' s');
+
+  o += hd('۴) زمان تناوب (T) و ضریب توزیع نیروی جانبی (K)');
+  o += row('ارتفاع سازه (H)', r.h + ' m');
+  o += row('زمان تناوب تجربی (T_exp)', seisF3(r.tEmp) + ' s');
+  o += row('زمان تناوب مورد استفاده (T)', seisF3(r.t) + ' s');
+  o += fm('T = ' + r.tFormula);
+  o += row('ضریب توزیع نیروی جانبی (K)', seisF3(r.k));
+  o += fm(r.kFormula);
+
+  o += hd('۵) شتاب طیفی (Sa) و ضریب برش پایه (C)');
+  o += row('شتاب طیفی سازه (Sa)', seisF4(r.sa) + ' g');
+  o += fm('Sa = ' + r.saFormula);
+  o += row('ضریب رفتار سیستم (Ru)', seisF3(r.ru));
+  o += row('ضریب حداقل برش پایه (C_min)', seisF4(r.cMin));
+  o += fm('C_min = ' + r.cMinFormula);
+  o += row('ضریب استاتیکی زلزله (C)', seisF4(r.c) + (r.cClamped ? ' ⚠️' : ''), 'hl');
+  if (r.cClamped) o += fm('توجه: بر اساس آیین‌نامه C باید بزرگتر یا مساوی C_min باشد؛ مقدار C با C_min جایگزین شد و C_min برای طراحی حاکم است.');
+  else o += fm('C = (Sds × Ie) / Ru = ' + r.cFormula);
+
+  o += hd('۶) گروه طراحی لرزه‌ای (SDC)');
+  o += row('گروه طراحی لرزه‌ای', r.sdc, 'hl');
+  o += `<div class="seis-f" dir="rtl">${r.sdcHtml}</div>`;
+
+  if (r.drift){
+    const d = r.drift;
+    o += hd('۷) کنترل دریفت');
+    o += row('پریود دریفت (T_drift)', seisF3(d.t) + ' s');
+    o += row('ضریب توزیع نیروی جانبی دریفت (K_drift)', seisF3(d.k));
+    o += fm(d.kFormula);
+    o += row('شتاب طیفی دریفت (Sa_drift)', seisF4(d.sa) + ' g');
+    o += fm('Sa_drift = ' + d.saFormula);
+    o += row('ضریب برش پایه دریفت (C_drift)', seisF4(d.c) + (d.clamped ? ' ⚠️' : ''), 'hl');
+    o += fm('C_drift = ' + d.cFormula + (d.clamped ? ' — اعمال C_min' : ''));
+  }
+  if (r.notes.length) o += r.notes.map(n => `<div class="seis-note warn" style="margin:10px 0 0">${n}</div>`).join('');
+  return o;
+}
+
+/* ترسیم طیف طرح (Sa - T) به‌صورت SVG؛ معادل نمودار matplotlib برنامه‌ی اصلی */
+function seisNiceStep(range, target){
+  const raw = range / target, mag = Math.pow(10, Math.floor(Math.log10(raw))), n = raw / mag;
+  return (n <= 1 ? 1 : n <= 2 ? 2 : n <= 2.5 ? 2.5 : n <= 5 ? 5 : 10) * mag;
+}
+function seisChartSVG(r){
+  const { sds, sd1, t0, ts } = r;
+  const N = 1000, TMAX = 8.0;
+  const pts = [];
+  let maxSa = 0;
+  for (let i = 0; i < N; i++){
+    const t = TMAX * i / (N - 1);
+    const sa = seisSpectrum(t, sds, sd1, t0, ts).v;
+    pts.push([t, sa]);
+    if (sa > maxSa) maxSa = sa;
+  }
+  const yMax = maxSa * 1.15;
+  const W = 360, H = 292, ml = 46, mr = 10, mt = 30, mb = 42;
+  const pw = W - ml - mr, ph = H - mt - mb;
+  const X = t => ml + (t / TMAX) * pw;
+  const Y = v => mt + ph - (v / yMax) * ph;
+
+  let g = '';
+  for (let i = 0; i <= TMAX; i++){
+    g += `<line x1="${X(i)}" y1="${mt}" x2="${X(i)}" y2="${mt + ph}" class="sg"/>`;
+    g += `<text x="${X(i)}" y="${mt + ph + 14}" text-anchor="middle" class="st">${i}</text>`;
+  }
+  const step = seisNiceStep(yMax, 6);
+  let dec = 0; while (Math.abs(step * Math.pow(10, dec) - Math.round(step * Math.pow(10, dec))) > 1e-9 && dec < 4) dec++;
+  for (let v = 0; v <= yMax + 1e-9; v += step){
+    g += `<line x1="${ml}" y1="${Y(v)}" x2="${ml + pw}" y2="${Y(v)}" class="sg"/>`;
+    g += `<text x="${ml - 6}" y="${Y(v) + 3.5}" text-anchor="end" class="st">${v.toFixed(dec)}</text>`;
+  }
+  const path = 'M' + pts.map(p => X(p[0]).toFixed(2) + ' ' + Y(p[1]).toFixed(2)).join(' L');
+  const px = X(r.t), py = Y(r.sa);
+  const lx = ml + pw - 192, ly = mt + 6;
+
+  return `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Standard Design Spectrum" style="direction:ltr;width:100%;height:auto;display:block">
+    <defs><clipPath id="seisClip"><rect x="${ml}" y="${mt}" width="${pw}" height="${ph}"/></clipPath></defs>
+    <style>.sg{stroke:var(--border-soft);stroke-width:1;stroke-dasharray:3 3}.st{fill:var(--text-dim);font:10px var(--ff-mono),monospace}.sl{fill:var(--text);font:10.5px var(--ff-mono),monospace}</style>
+    ${g}
+    <rect x="${ml}" y="${mt}" width="${pw}" height="${ph}" fill="none" style="stroke:var(--border)"/>
+    <text x="${W / 2}" y="17" text-anchor="middle" style="fill:var(--text);font:700 12px var(--ff-mono),monospace">Standard Design Spectrum (Sa vs T)</text>
+    <text x="${ml + pw / 2}" y="${H - 6}" text-anchor="middle" class="sl">Period T (sec)</text>
+    <text transform="translate(11 ${mt + ph / 2}) rotate(-90)" text-anchor="middle" class="sl">Spectral Acceleration Sa (g)</text>
+    <path d="${path}" clip-path="url(#seisClip)" fill="none" style="stroke:var(--neon);stroke-width:2.4" stroke-linejoin="round"/>
+    <circle cx="${px}" cy="${py}" r="5" clip-path="url(#seisClip)" style="fill:var(--neon2);stroke:var(--surface);stroke-width:1.5"/>
+    <g>
+      <rect x="${lx}" y="${ly}" width="186" height="52" rx="4" style="fill:var(--surface);stroke:var(--border-soft)" opacity=".95"/>
+      <line x1="${lx + 8}" y1="${ly + 13}" x2="${lx + 26}" y2="${ly + 13}" style="stroke:var(--neon);stroke-width:2.4"/>
+      <text x="${lx + 32}" y="${ly + 16.5}" class="sl">Standard Design Spectrum</text>
+      <circle cx="${lx + 17}" cy="${ly + 32}" r="4.5" style="fill:var(--neon2)"/>
+      <text x="${lx + 32}" y="${ly + 30}" class="sl">Structure T = ${seisF3(r.t)} s</text>
+      <text x="${lx + 32}" y="${ly + 44}" class="sl">Sa = ${seisF3(r.sa)} g</text>
+    </g>
+  </svg>`;
+}
+function seisDrawChart(r){
+  const box = seisEl('seisChartBox');
+  box.hidden = false;
+  if (r.sds === 0 || r.sd1 === 0){
+    box.innerHTML = '<div class="seis-note warn" style="margin:0">مقادیر Sds و Sd1 صفر است؛ ترسیم طیف ممکن نیست.</div>';
+    return;
+  }
+  box.innerHTML = '<h3 class="ref-h">طیف طرح استاندارد (Sa – T)</h3><div class="seis-chart">' + seisChartSVG(r) + '</div>' +
+    `<div class="seis-f" dir="rtl" style="margin-top:6px">T0 = ${seisF3(r.t0)} s ، Ts = ${seisF3(r.ts)} s ، T_L = ${SEIS_TL} s</div>`;
+}
+
+function calcSeismic(){
+  const res = seisEl('seisResult'), chart = seisEl('seisChartBox');
+  res.hidden = false;
+  try {
+    const r = seisCompute(seisReadInputs());
+    res.innerHTML = seisRender(r);
+    seisDrawChart(r);
+  } catch (e) {
+    res.innerHTML = `<div class="seis-err">⚠️ ${e.message}</div>`;
+    chart.hidden = true; chart.innerHTML = '';
+  }
+}
+(function initSeismic(){ seisBuildRu(); seisSoilUI(); seisT2Toggle(); })();
+</script>
+<script>
+/* ثبت Service Worker برای نصب‌پذیری و کار آفلاین (فقط روی http/https) */
+if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+  window.addEventListener('load', () => { navigator.serviceWorker.register('service-worker.js').catch(() => {}); });
+}
+</script>
+</body>
+</html>
